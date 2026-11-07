@@ -160,7 +160,7 @@ def make_short(main, start, end, title, title2="", footer="Full story on the cha
           f"[b]scale={W}:-2[fg];[bg][fg]overlay=(W-w)/2:(H-h)/2[v1];[v1][1:v]overlay=0:0,"
           f"fade=t=in:d=0.3,fade=t=out:st={d-0.5:.2f}:d=0.5[v]")
     subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-ss", str(start), "-t", f"{d:.2f}", "-i", main, "-i", "_short_overlay.png",
-                    "-filter_complex", fc, "-map", "[v]", "-map", "0:a", "-af", f"afade=t=out:st={d-0.6:.2f}:d=0.6",
+                    "-filter_complex", fc, "-map", "[v]", "-map", "0:a", "-af", f"afade=t=out:st={d-0.6:.2f}:d=0.6,loudnorm=I=-14:TP=-1.5:LRA=11,aresample=48000",
                     "-c:v", "libx264", "-crf", "20", "-preset", "veryfast", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "160k", out], check=True)
     return out
 
@@ -209,7 +209,7 @@ def finish(scene_files, voice, out, bed_db=-17, srt_lines=None, srt_times=None):
     open("finished/list.txt", "w").write("".join(f"file '{os.path.basename(p)}'\n" for p in done))
     subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", "finished/list.txt", "-c", "copy", "finished/video.mp4"], check=True)
     ambient_bed(t, cuts[:-1], "finished/bed.wav")
-    af = f"[2:a]volume={bed_db}dB[b];[1:a]aresample=44100,apad[v];[v][b]amix=inputs=2:duration=longest:normalize=0[a]"
+    af = f"[2:a]volume={bed_db}dB[b];[1:a]aresample=44100,apad[v];[v][b]amix=inputs=2:duration=longest:normalize=0,loudnorm=I=-14:TP=-1.5:LRA=11,aresample=48000[a]"
     subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", "finished/video.mp4", "-i", voice, "-i", "finished/bed.wav",
                     "-filter_complex", af, "-map", "0:v", "-map", "[a]", "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-shortest", out], check=True)
     if srt_lines and srt_times:
