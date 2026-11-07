@@ -44,6 +44,12 @@ finished example.
    and must be described as approximate. Natural Earth shows de-facto borders; do not draw the
    Kalapani–Lipulekh–Limpiyadhura area differently (Santosh decided on 7 Nov 2026 to keep Natural
    Earth's default, because most viewers are outside Nepal).
+   LOOK (Santosh approved 7 Nov 2026): "painted documentary" — every non-map scene uses an AI painted
+   background from the free Kaggle GPU (see `pipeline/painted.py` for the exact steps and rules) with our
+   animated code characters, forts, smoke, flags and titles on top (`episodes/sample-painted/` is the
+   reference). Plan one painting per scene: write the prompts in `episodes/<ep>/paintings.md` first,
+   generate them in one Kaggle run, reject wrong ones, then build scenes. Maps stay code-drawn.
+   If the Mac or Kaggle is unavailable, fall back to `pipeline/style2.py` painted-by-code layers and say so.
    Every video must look different from the last (scene layouts, colours inside the brand, motion).
    Prefer story moments with characters, places and objects over walls of text; keep on-screen text short.
    People: use `pipeline/characters.py` (cartoon kit: JUNG_BAHADUR, PRITHVI_NARAYAN, GURKHA,
@@ -59,7 +65,8 @@ finished example.
    max, high contrast, each clearly different: e.g. map-led, character-led, big-question) →
    `thumb_a.png`, `thumb_b.png`, `thumb_c.png`.
 7. Write `upload.md` per episode: title (curiosity, under 60 chars, no clickbait lies), description
-   (2-line hook, chapter timestamps, sources list, "Narration uses an AI voice."), tags.
+   (2-line hook, chapter timestamps, sources list, "Narration uses an AI voice. Visuals include
+   AI-generated painted backgrounds."), tags.
 7b. Also draft (do not post) one share post per main video for Santosh to post himself in Nepali
    diaspora Facebook groups or r/Nepal — short, honest, no spam, max 1–2 posts a week in total.
 8. Commit and push everything except large renders (`*.mp4` is git-ignored; keep them in the session).
