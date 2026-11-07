@@ -164,6 +164,59 @@ def make_short(main, start, end, title, title2="", footer="Full story on the cha
                     "-c:v", "libx264", "-crf", "20", "-preset", "veryfast", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "160k", out], check=True)
     return out
 
+# ---------- "documentary feel" finishing ----------
+def ambient_bed(duration, cuts=(), out="bed.wav", seed=5):
+    """Original, royalty-free sound bed made from scratch: a warm drone, soft singing-bowl strikes,
+    and a gentle whoosh at every scene cut. Nothing sampled, so no copyright issues."""
+    import numpy as np, soundfile as sf
+    sr = 44100; n = int(duration * sr); t = np.arange(n) / sr; r = np.random.default_rng(seed)
+    bed = np.zeros(n)
+    for f, a in [(55, .5), (82.4, .35), (110, .3), (164.8, .15), (220, .08)]:   # A / E drone
+        lfo = 0.6 + 0.4 * np.sin(2 * np.pi * (0.03 + r.random() * 0.04) * t + r.random() * 6)
+        bed += a * lfo * np.sin(2 * np.pi * f * t + r.random() * 6)
+    bed *= 0.10
+    bowl_f = 392.0; parts = [(1, 1), (2.71, .5), (5.12, .25), (8.3, .1)]
+    for st in np.arange(4.0, duration - 6, 13.0):                                 # singing bowl strikes
+        i0 = int(st * sr); m = min(n - i0, int(9 * sr)); tt = np.arange(m) / sr
+        hit = sum(a * np.sin(2 * np.pi * bowl_f * k * tt) * np.exp(-tt * (0.6 + k * 0.35)) for k, a in parts)
+        bed[i0:i0 + m] += 0.05 * hit * (1 + 0.15 * np.sin(2 * np.pi * 4.5 * tt))
+    for c in cuts:                                                                 # whoosh at cuts
+        i0 = int(max(0, c - 0.35) * sr); m = min(n - i0, int(0.9 * sr))
+        if m <= 0: continue
+        noise = r.standard_normal(m); k = np.ones(40) / 40; noise = np.convolve(noise, k, "same")
+        env = np.sin(np.pi * np.arange(m) / m) ** 2
+        bed[i0:i0 + m] += 0.12 * noise * env
+    fade = np.minimum(1, np.minimum(t / 3, (duration - t) / 3)); bed *= fade
+    sf.write(out, np.stack([bed, bed * 0.97], 1).astype("float32"), sr)
+    return out
+
+def finish(scene_files, voice, out, bed_db=-17, srt_lines=None, srt_times=None):
+    """Turn rendered scene files into a less 'synthetic-looking' film:
+    slow camera drift on every scene (alternating push-in and pan), film grain, soft vignette,
+    an original ambient sound bed under the narration, and an .srt caption file."""
+    os.makedirs("finished", exist_ok=True); done = []; cuts = []; t = 0
+    for i, f in enumerate(scene_files):
+        d = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", f], capture_output=True, text=True).stdout)
+        n = max(1, round(d * FPS)); dx = (1 if i % 2 else -1) * 30
+        z = f"1.0+0.045*on/{n}" if i % 3 != 2 else f"1.045-0.045*on/{n}"
+        vf = (f"scale=2112:1188,zoompan=z='{z}':x='iw/2-(iw/zoom/2)+{dx}*on/{n}':y='ih/2-(ih/zoom/2)':d=1:s=1920x1080:fps={FPS},"
+              f"noise=alls=7:allf=t+u,vignette=angle=PI/5")
+        p = f"finished/{os.path.basename(f)}"; tmp = p[:-4] + ".tmp.mp4"
+        if not os.path.exists(p):
+            subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", f, "-vf", vf, "-c:v", "libx264", "-crf", "19", "-preset", "veryfast", "-pix_fmt", "yuv420p", tmp], check=True)
+            os.replace(tmp, p)
+        done.append(p); t += d; cuts.append(t)
+    open("finished/list.txt", "w").write("".join(f"file '{os.path.basename(p)}'\n" for p in done))
+    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", "finished/list.txt", "-c", "copy", "finished/video.mp4"], check=True)
+    ambient_bed(t, cuts[:-1], "finished/bed.wav")
+    af = f"[2:a]volume={bed_db}dB[b];[1:a]aresample=44100,apad[v];[v][b]amix=inputs=2:duration=longest:normalize=0[a]"
+    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", "finished/video.mp4", "-i", voice, "-i", "finished/bed.wav",
+                    "-filter_complex", af, "-map", "0:v", "-map", "[a]", "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-shortest", out], check=True)
+    if srt_lines and srt_times:
+        def ts(x): return f"{int(x//3600):02d}:{int(x%3600//60):02d}:{int(x%60):02d},{int(x*1000%1000):03d}"
+        open(out[:-4] + ".srt", "w").write("".join(f"{i+1}\n{ts(a)} --> {ts(b)}\n{line}\n\n" for i, (line, (a, b)) in enumerate(zip(srt_lines, srt_times))))
+    return out
+
 # ---------- real maps (Natural Earth 1:50m, public domain) ----------
 _GEO = None
 def countries():
