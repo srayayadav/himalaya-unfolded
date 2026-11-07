@@ -18,7 +18,12 @@ finished example.
    and Test & Compare results). Keep a running log in `analytics.md`. Use it to choose topics:
    more of what kept people watching, less of what didn't. Put a 4-line Roman Nepali summary at the
    top of your message to Santosh (progress toward 1,000 subs / 8,000 watch hours included).
-1. Pick 2 topics from `topics.md` following its rule: first re-check search demand with web search
+1. Pick 2 topics from `topics.md` following its rule: first check real YouTube search demand in
+   YouTube Studio → Analytics → Trends (built-in browser; URL
+   https://studio.youtube.com/channel/UCOOA9KN8xs9XZOU3HBAIILQ/analytics/tab-research/period-default?pageType=TOPIC_PAGE&topic=<words>):
+   note each candidate's search volume labels (High/Medium/Low) and what similar videos are getting,
+   and write them into `topics.md`. Use the exact high-volume search phrases in titles and tags.
+   Also re-check with web search
    (recent news, recent YouTube uploads/documentaries on the topic, anything trending about Nepal or
    the Himalaya this week), then pair one high-demand Everest/adventure topic with one Nepal
    story/history topic. Keep any promise made in a previous video's teaser. Move them to "In production".
