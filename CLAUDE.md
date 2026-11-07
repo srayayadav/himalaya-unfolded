@@ -76,18 +76,21 @@ finished example.
 
 ## After approval
 - Only publish what Santosh approved, in the words he approved. Never publish without his OK in chat.
-- Upload through the Claude app's built-in browser on his Mac (YouTube Studio). If the Mac or app is
-  offline, tell him and give him the files plus `upload.md` text so he can upload from his phone.
-- Schedule main videos for Tuesday and Friday 18:00 Nepal time, and the four Shorts on
-  Monday, Wednesday, Thursday and Saturday 18:00 Nepal time (each Short after its main video when possible). Set "No, it's not made for kids". Set the altered/synthetic
-  content toggle only if a scene shows a realistic fake of a real person or event (our maps and
-  illustrations do not need it).
-- On every main video also: upload `main.srt` as English captions; add all three thumbnails to
-  Test & Compare (desktop Studio); add an end screen (subscribe + next/best video); add it to the
-  right playlist ("Nepal History", "Everest & Mountains", "Himalayan Mysteries", "Why Nepal?" —
+- UPLOAD IS DONE BY SANTOSH HIMSELF (his decision, 7 Nov 2026): he downloads the files you sent and
+  uploads them from his phone or Mac. For each approved video send him, in one SendUserMessage, a
+  ready-to-copy block per file: title, description, tags, playlist name, publish day/time, "Not made
+  for kids", and which thumbnail to use (thumb_a; mention thumb_b/c for Test & Compare on desktop).
+  Also send the .srt caption file. Do not try to upload files yourself.
+- Suggested schedule: main videos Tuesday and Friday 18:00 Nepal time, the four Shorts Monday,
+  Wednesday, Thursday and Saturday 18:00 (each Short after its main video when possible).
+- After he says a video is uploaded, and only if the Mac's built-in browser is reachable, you may do
+  the no-file settings in YouTube Studio: playlist, end screen, pinned comment with sources and a
+  question, linking each Short to its main video ("Related video"). Ask him first the first time.
+- Settings for every main video (Santosh uploads the files; you can help with the rest): English
+  captions from `main.srt`; three thumbnails in Test & Compare (desktop Studio); end screen
+  (subscribe + next/best video); the right playlist ("Nepal History", "Everest & Mountains", "Himalayan Mysteries", "Why Nepal?" —
   create a playlist the first time it is needed); post a pinned comment with the full source links
   and one question for viewers.
-- Shorts: link each Short to its main video (Studio "Related video" field).
 - Never buy views, subscribers, likes or comments, and never use "sub4sub"/engagement groups.
   Paid YouTube/Google Ads promotion is allowed only if Santosh explicitly asks and sets the budget.
 - Log published items in `published.md` (date, title, URL).
