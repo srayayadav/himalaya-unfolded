@@ -100,6 +100,12 @@ finished example.
 - Viewer topic requests: add them to `topics.md` under "Viewer ideas".
 - If nothing new, send nothing.
 
+## Saving usage (Santosh's Claude usage is limited)
+- Prefer get_page_text / read_page / find over screenshots; take a screenshot only to check a visual.
+- Use scaled screenshots (scale 0.5–0.6) unless detail is needed.
+- Don't re-read big files you already wrote; keep messages to Santosh short.
+- If a run hits the usage limit, finish the current video only and tell Santosh; don't start the second.
+
 ## Hard rules
 - No current politics, religion controversies, gore. No copyrighted images/music/clips, no photos of
   real people. Public-domain sources only (Wikimedia Commons PD) if a real image is truly needed.
