@@ -23,12 +23,16 @@ finished example.
    beat, check full-size preview frames of the busiest moments (`preview()` + `contact_sheet()`) and
    look at them before rendering, then `render_all()` at 1920×1080 → `main.mp4`.
    Every video must look different from the last (scene layouts, colours inside the brand, motion).
-5. Make one Short per episode: the best 30–50 second fact, redrawn at 1080×1920 (not a crop) → `short.mp4`.
+5. Make TWO Shorts per main video by clipping it: pick the two strongest self-contained moments
+   (30–55 s each, starting at a beat start so the narration begins cleanly), and run
+   `make_short(main.mp4, start, end, title, title2)` → `short_<name>.mp4`. The clip sits in the middle
+   of a 9:16 frame with a blurred background, a big title on top and "Full story on the channel" below.
+   Watch both before sending. Example: `episodes/002-never-colonized/` (yam + Nalapani).
 6. Make a thumbnail per episode (1280×720 PNG, 3–5 big words max, high contrast) → `thumb.png`.
 7. Write `upload.md` per episode: title (curiosity, under 60 chars, no clickbait lies), description
    (2-line hook, chapter timestamps, sources list, "Narration uses an AI voice."), tags.
 8. Commit and push everything except large renders (`*.mp4` is git-ignored; keep them in the session).
-9. Send Santosh the two main videos, two Shorts and thumbnails with `SendUserFile`, plus one
+9. Send Santosh the two main videos, four Shorts and thumbnails with `SendUserFile`, plus one
    `SendUserMessage` in Roman Nepali listing titles and asking: approve, or what to change.
    Send a push notification so it reaches his phone. Then wait for his answer in this session.
 
@@ -36,8 +40,8 @@ finished example.
 - Only publish what Santosh approved, in the words he approved. Never publish without his OK in chat.
 - Upload through the Claude app's built-in browser on his Mac (YouTube Studio). If the Mac or app is
   offline, tell him and give him the files plus `upload.md` text so he can upload from his phone.
-- Schedule main videos for Tuesday and Friday 18:00 Nepal time (good evening slot for US morning),
-  Shorts on Wednesday and Saturday. Set "No, it's not made for kids". Set the altered/synthetic
+- Schedule main videos for Tuesday and Friday 18:00 Nepal time, and the four Shorts on
+  Monday, Wednesday, Thursday and Saturday 18:00 Nepal time (each Short after its main video when possible). Set "No, it's not made for kids". Set the altered/synthetic
   content toggle only if a scene shows a realistic fake of a real person or event (our maps and
   illustrations do not need it).
 - Log published items in `published.md` (date, title, URL).

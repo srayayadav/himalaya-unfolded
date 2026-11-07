@@ -9,7 +9,7 @@ Usage in an episode folder:
 
 Every scene function draws ONE frame as an SVG body; helpers below keep the brand look.
 """
-import json, math, os, subprocess, random
+import json, math, os, re, subprocess, random
 
 FPS = 30
 GOLD, CREAM, WHITE, SNOW = "#FFD98A", "#F3DCC0", "#FFFFFF", "#F7F4EF"
@@ -67,6 +67,7 @@ def bg(W, H, kind="night", stars=40, seed=1):
 
 def text(x, y, s, size, fill=WHITE, weight=700, anchor="middle", op=1, ls=0, shadow=True):
     f = ' filter="url(#ts)"' if shadow else ""
+    s = re.sub(r"&(?![a-zA-Z]+;|#\d+;)", "&amp;", str(s)).replace("<", "&lt;")
     return f'<text x="{x:.0f}" y="{y:.0f}" text-anchor="{anchor}" font-family="Inter" font-weight="{weight}" font-size="{size}" letter-spacing="{ls}" fill="{fill}" opacity="{op:.3f}"{f}>{s}</text>'
 
 def poly(pts, fill, op=1):
@@ -140,6 +141,58 @@ def render_all(scenes, W, H, out, audio="voice.wav", music=None, music_vol=0.12,
                "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-af", "apad", "-shortest", out]
     subprocess.run(cmd, check=True)
     return out
+
+def make_short(main, start, end, title, title2="", footer="Full story on the channel", out="short.mp4"):
+    """Clip [start, end] seconds of a 16:9 main video into a 9:16 Short (max 60 s):
+    blurred copy fills the frame, the clip sits in the middle, title on top, footer at the bottom."""
+    W, H = 1080, 1920
+    assert end - start <= 60, "Shorts must be 60 s or less"
+    over = f'<rect x="60" y="250" width="960" height="{300 if title2 else 190}" rx="28" fill="#06142B" opacity="0.82" stroke="{GOLD}" stroke-opacity="0.4" stroke-width="3"/>'
+    over += text(540, 375, title, 76, WHITE, 900)
+    if title2: over += text(540, 485, title2, 76, GOLD, 900)
+    over += f'<rect x="140" y="1480" width="800" height="110" rx="55" fill="#06142B" opacity="0.82"/>' + text(540, 1552, footer, 42, CREAM, 700)
+    over += text(540, 1720, "HIMALAYA UNFOLDED", 40, GOLD, 800, ls=8)
+    s = f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}">{defs()}{over}</svg>'
+    open("_short_overlay.svg", "w").write(s)
+    subprocess.run(["rsvg-convert", "_short_overlay.svg", "-o", "_short_overlay.png"], check=True)
+    d = end - start
+    fc = (f"[0:v]split[a][b];[a]scale=-2:{H},crop={W}:{H},boxblur=30:2,eq=brightness=-0.12[bg];"
+          f"[b]scale={W}:-2[fg];[bg][fg]overlay=(W-w)/2:(H-h)/2[v1];[v1][1:v]overlay=0:0,"
+          f"fade=t=in:d=0.3,fade=t=out:st={d-0.5:.2f}:d=0.5[v]")
+    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-ss", str(start), "-t", f"{d:.2f}", "-i", main, "-i", "_short_overlay.png",
+                    "-filter_complex", fc, "-map", "[v]", "-map", "0:a", "-af", f"afade=t=out:st={d-0.6:.2f}:d=0.6",
+                    "-c:v", "libx264", "-crf", "20", "-preset", "veryfast", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "160k", out], check=True)
+    return out
+
+# ---------- real maps (Natural Earth 1:50m, public domain) ----------
+_GEO = None
+def countries():
+    """{ADMIN name: [ring, ...]} from Natural Earth admin-0 (data/ne_50m_countries.geojson).
+    Borders are Natural Earth's de-facto lines; tell the owner before showing any disputed area."""
+    global _GEO
+    if _GEO is None:
+        p = os.path.join(HERE, "data", "ne_50m_countries.geojson")
+        if not os.path.exists(p):
+            os.makedirs(os.path.dirname(p), exist_ok=True)
+            subprocess.run(["curl", "-sSL", "-o", p, "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_50m_admin_0_countries.geojson"], check=True)
+        _GEO = {}
+        for f in json.load(open(p))["features"]:
+            g = f["geometry"]; polys = g["coordinates"] if g["type"] == "MultiPolygon" else [g["coordinates"]]
+            _GEO[f["properties"]["ADMIN"]] = [ring for poly_ in polys for ring in poly_[:1]]
+    return _GEO
+
+def projector(lon0, lat0, lon1, lat1, x0, y0, x1, y1):
+    """Equirectangular projection of a lon/lat box onto a pixel box, keeping the shape true at mid-latitude."""
+    k = math.cos(math.radians((lat0 + lat1) / 2))
+    sx = (x1 - x0) / ((lon1 - lon0) * k); sy = (y1 - y0) / (lat1 - lat0); s = min(sx, sy)
+    cx, cy = (x0 + x1) / 2, (y0 + y1) / 2; mlon, mlat = (lon0 + lon1) / 2, (lat0 + lat1) / 2
+    return lambda lon, lat: (cx + (lon - mlon) * k * s, cy - (lat - mlat) * s)
+
+def country_path(name, proj, fill, op=1, stroke="#0A1A2C", sw=2, extra=""):
+    d = ""
+    for ring in countries()[name]:
+        d += "M" + " L".join(f"{x:.1f} {y:.1f}" for x, y in (proj(lo, la) for lo, la in ring)) + "Z"
+    return f'<path d="{d}" fill="{fill}" opacity="{op:.3f}" stroke="{stroke}" stroke-width="{sw}" stroke-linejoin="round" {extra}/>'
 
 def contact_sheet(paths, out, cols=2, w=640):
     from PIL import Image

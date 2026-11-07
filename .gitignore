@@ -5,3 +5,5 @@ scenes/
 *_list.txt
 preview*.png
 __pycache__/
+thumb.svg
+_short_overlay.*

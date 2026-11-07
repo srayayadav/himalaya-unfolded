@@ -1,0 +1,11 @@
+# Sources — Why Nepal Was Never Colonized
+
+- Yam between two boulders (Qing China / East India Company): DMN News, "Decoding the 'yam between two boulders' metaphor" — https://thedmnnews.com/decoding-the-yam-between-two-boulders-metaphor-of-king-prithvi-narayan-shah ; still quoted today: Kathmandu Post, "Nepal like a yam between two rocks" (2024) — https://kathmandupost.com/columns/2024/09/14/nepal-like-a-yam-between-two-rocks
+- Nalapani: siege 31 Oct – 30 Nov 1814, ~600 defenders under Capt. Balbhadra Kunwar vs ~3,500 Company troops, Maj. Gen. Gillespie killed on day one, garrison escaped at night; Gurkha recruitment tradition ~200 years — Nepali Times, Kunda Dixit, "200th anniversary of Nalapani" — https://nepalitimes.com/kunda-dixit-200th-anniversary-of-nalapani
+- Treaty of Sugauli: concluded 2 Dec 1815, ratified early 1816, nearly one-third of territory lost (Garhwal, Kumaon, Terai west of the Gandak), British resident, fixed border, part of Terai returned Dec 1816 — The Diplomat, "How Nepal got its borders" (2020) — https://thediplomat.com/2020/07/how-nepal-got-its-borders
+- Why Britain didn't annex: terrain, territorial gains, Rana cooperation, Gurkha recruits, control of Nepal's foreign relations and arms; "glorified member of the protectorate" (Lee Warner); independence partly paid with recruitment — Record Nepal, "Why did the British not colonize Nepal?" — https://recordnepal.com/why-did-the-british-not-colonize-nepal
+- 1857: Nepal accepted the offer to send troops; Gurkhas at Lucknow — Spotlight Nepal, "Gurkhas in the Indian Mutiny" (2015) — https://www.spotlightnepal.com/2015/04/09/gurkhas-in-the-indian-mutiny/
+- 1923 treaty: 21 Dec 1923, Singha Durbar, signed by Lt Col William O'Connor and Chandra Shumsher Rana, recognized Nepal as sovereign and independent, two-day national holiday; WWI 90,000+ Gurkhas served, 20,000+ casualties — The Gurkha Museum, "The Anglo-Nepal Treaty of 1923" — https://thegurkhamuseum.co.uk/blog/the-anglo-nepal-treaty-of-1923/
+
+Left out on purpose (sources vary): exact casualty totals at Nalapani, size of Nepal's 1857 force, return of the western Terai in 1860.
+General knowledge: Prithvi Narayan Shah king of Gorkha from the 1740s; Kathmandu Valley taken 1768–69; Rana rule from 1846.
