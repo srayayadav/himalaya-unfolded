@@ -31,7 +31,7 @@ Sources
 - DMN News, "Decoding the 'yam between two boulders' metaphor"
 Full links: in the pinned comment.
 
-Narration uses an AI voice. Maps are simplified illustrations.
+Narration uses an AI voice. Visuals include AI-generated painted backgrounds; maps are simplified illustrations.
 
 #Nepal #History #Himalaya
 
