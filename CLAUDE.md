@@ -7,7 +7,7 @@ short and plain. Videos themselves are in English.
 
 ## What the channel is
 Animated, narrated stories about Nepal and the Himalaya: history, legends, science, "why" questions.
-English narration (free Kokoro voice `bm_george`), code-drawn animation (maps, timelines, clocks,
+English narration (free Kokoro voice `am_michael`, American, speed 0.95 — Santosh's choice from 7 Nov 2026; episodes 001–002 used `bm_george`), code-drawn animation (maps, timelines, clocks,
 two-tone snow-capped mountains, prayer flags). Brand colours: deep teal night sky, sunrise gold
 `#FFD98A`, cream `#F3DCC0`. Toolkit: `pipeline/hu.py`. Look at `episodes/001-nepal-time/` for a
 finished example.
@@ -18,7 +18,10 @@ finished example.
    and Test & Compare results). Keep a running log in `analytics.md`. Use it to choose topics:
    more of what kept people watching, less of what didn't. Put a 4-line Roman Nepali summary at the
    top of your message to Santosh (progress toward 1,000 subs / 8,000 watch hours included).
-1. Pick 2 topics from `topics.md` (top of the backlog, rotating the 4 groups). Move them to "In production".
+1. Pick 2 topics from `topics.md` following its rule: first re-check search demand with web search
+   (recent news, recent YouTube uploads/documentaries on the topic, anything trending about Nepal or
+   the Himalaya this week), then pair one high-demand Everest/adventure topic with one Nepal
+   story/history topic. Keep any promise made in a previous video's teaser. Move them to "In production".
 2. Research each with web search. Every fact in the script needs a source; when sources disagree,
    leave the disputed detail out (example: Nepal's +5:45 adoption year — 1956 vs 1986 — was left out).
    Put sources in `episodes/<nnn-slug>/sources.md`.

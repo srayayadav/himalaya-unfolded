@@ -26,7 +26,7 @@ def ensure_models():
         if not os.path.exists(p):
             subprocess.run(["curl", "-sSL", "-o", p, base + name], check=True)
 
-def narrate(lines, voice="bm_george", speed=1.0, gap=0.45, out="voice.wav"):
+def narrate(lines, voice="am_michael", speed=0.95, gap=0.45, out="voice.wav", lang="en-us"):
     """Kokoro TTS (Apache-2.0, free for commercial use). Returns [(start, end)] per line."""
     ensure_models()
     import numpy as np, soundfile as sf
@@ -34,7 +34,7 @@ def narrate(lines, voice="bm_george", speed=1.0, gap=0.45, out="voice.wav"):
     k = Kokoro(os.path.join(MODELS, "kokoro.onnx"), os.path.join(MODELS, "voices.bin"))
     chunks, times, t, sr = [], [], 0.0, 24000
     for line in lines:
-        a, sr = k.create(line, voice=voice, speed=speed, lang="en-gb")
+        a, sr = k.create(line, voice=voice, speed=speed, lang=lang)
         times.append((round(t, 2), round(t + len(a) / sr, 2)))
         pad = np.zeros(int(sr * gap), dtype=a.dtype)
         chunks += [a, pad]; t += (len(a) + len(pad)) / sr
