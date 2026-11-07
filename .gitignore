@@ -1,0 +1,7 @@
+*.mp4
+*.wav
+pipeline/models/
+scenes/
+*_list.txt
+preview*.png
+__pycache__/
