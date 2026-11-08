@@ -42,12 +42,12 @@ Narration uses an AI voice. Visuals include AI-generated painted backgrounds; ma
 **Schedule:** Tuesday 10 Nov 2026, 18:00 Nepal time
 
 ## Short 1 (short_khukuri.mp4) — clip 2:05.9–2:43.8
-**Title:** The Gurkha Knife Myth #shorts
+**Title:** Must a Khukuri Draw Blood? #shorts
 **Description:** Does a khukuri really have to draw blood once it's drawn? The Brigade of Gurkhas says no. Full story on the channel. Narration uses an AI voice. Visuals include AI-generated painted backgrounds. #Gurkha #Nepal #shorts
 **Schedule:** Wednesday 11 Nov, 18:00 NPT (after the main video)
 
 ## Short 2 (short_lachhiman.mp4) — clip 3:26.8–4:04.7
-**Title:** One Hand, Four Hours: Lachhiman Gurung VC #shorts
+**Title:** How He Fought On With One Hand #shorts
 **Description:** Burma, May 1945: a wounded Gurkha rifleman held his trench alone for four hours. Full story on the channel. Narration uses an AI voice. Visuals include AI-generated painted backgrounds. #Gurkha #VictoriaCross #shorts
 **Schedule:** Thursday 12 Nov, 18:00 NPT
 
@@ -55,7 +55,7 @@ Narration uses an AI voice. Visuals include AI-generated painted backgrounds; ma
 Sources (full links): see sources.md list. Question: Is there a Gurkha in your family? Which regiment?
 
 ## Short 3 (short_kulbir.mp4) — clip 2:44.2–3:26.8
-**Title:** The First Gurkha Victoria Cross #shorts
+**Title:** Why He Carried a Wounded Soldier Home #shorts
 **Description:** France, 1915: Rifleman Kulbir Thapa refused to leave a wounded British soldier. Full story on the channel. Narration uses an AI voice. Visuals include AI-generated painted backgrounds. #Gurkha #shorts
 
 ## Shorts schedule (7 a week, one a day 18:00 NPT; 12:00 on main-video days)

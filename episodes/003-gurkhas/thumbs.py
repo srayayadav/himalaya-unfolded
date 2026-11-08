@@ -16,12 +16,12 @@ def save(body, out):
 a = S.nepal_map(1) + dim(0.15)
 G = S.PZ(84.63, 28.0)
 a += f'<circle cx="{G[0]:.0f}" cy="{G[1]:.0f}" r="60" fill="none" stroke="{GOLD}" stroke-width="10"/>' + big(G[0], G[1] - 90, "GORKHA", 70, GOLD)
-a += S.khukuri(1100, 760, 2.0, -12)
+a += S.khukuri(980, 690, 1.8, -28)
 a += big(60, 190, "WHY ARMIES", 150, WHITE, "start") + big(60, 340, "FEARED THEM", 150, GOLD, "start")
 save(DEFS + a, "thumb_a.png")
 # B: character-led
 b = DEFS + PAINT("g_end") + shade(0.5)
-b += warm(character(1350, 960, 1.35, GURKHA, 0.5, gesture=0.9)) + S.khukuri(1530, 300, 1.2, -40)
+b += warm(character(1350, 960, 1.35, GURKHA, 0.5, gesture=0.9)) + S.khukuri(1330, 300, 1.1, -25)
 b += big(80, 300, "THE", 120, WHITE, "start") + big(80, 470, "GURKHAS", 190, GOLD, "start")
 save(b, "thumb_b.png")
 # C: big question

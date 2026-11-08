@@ -8,14 +8,19 @@ KHAKI = "#B9A576"; RED = "#C8553D"; NEP = "#2F6A7A"
 PZ = projector(79.5, 25.6, 89.0, 31.2, 60, 150, 1860, 1050)
 
 def khukuri(x, y, s=1.0, rot=-20, op=1, sheath=False):
-    """Stylised khukuri: forward-curved blade, notch (cho) near the handle, wooden handle with brass bolster."""
-    blade = (f'<path d="M0 0 C60 -10 150 -40 230 -10 C290 12 330 60 350 110 C300 70 250 55 200 58 C130 62 60 40 0 34Z" '
-             f'fill="#C9CFD6" stroke="#6C7680" stroke-width="3"/>'
-             f'<path d="M10 8 C80 0 160 -22 228 -2" stroke="#EEF2F5" stroke-width="5" fill="none" opacity="0.8"/>'
-             f'<path d="M6 30 l10 -8 l-2 12z" fill="#2A2A2A"/>')
-    handle = ('<rect x="-30" y="2" width="34" height="34" rx="4" fill="#C9A04A"/>'
-              '<path d="M-30 4 L-150 -6 Q-172 18 -150 44 L-30 34Z" fill="#6B3F22" stroke="#3E2414" stroke-width="3"/>'
-              '<path d="M-60 6 L-60 34 M-100 2 L-100 38" stroke="#3E2414" stroke-width="4"/>')
+    """Khukuri (checked against a real photo, 9 Nov 2026): blade bends DOWN at an 'elbow', spine is the
+    outer convex curve, edge is the inner side with a wide belly near the tip, cho notch at the base of
+    the edge, brass bolster, wooden handle with rings and a flared butt."""
+    blade = ('<path d="M0 0 C70 -12 140 -12 190 14 C250 44 305 100 352 168 C320 188 268 208 222 186 '
+             'C182 162 148 96 100 64 C80 54 60 50 40 48 L34 40 L30 47 L25 38 L20 47 L16 40 L0 36Z" '
+             'fill="#D9DEE3" stroke="#6C7680" stroke-width="3" stroke-linejoin="round"/>'
+             '<path d="M18 10 C80 2 140 4 186 30" stroke="#5F6973" stroke-width="5" fill="none" stroke-linecap="round"/>'
+             '<path d="M200 44 C245 76 290 120 334 166" stroke="#FFFFFF" stroke-width="4" fill="none" opacity="0.7"/>')
+    handle = ('<path d="M-4 -2 L-34 -6 L-34 42 L-4 38Z" fill="#C9A04A" stroke="#7A5A1A" stroke-width="3"/>'
+              '<path d="M-34 -4 C-80 -8 -120 -4 -150 -16 L-176 -26 L-182 62 L-150 54 '
+              'C-120 44 -80 46 -34 40Z" fill="#6B3420" stroke="#3E1E12" stroke-width="3"/>'
+              '<path d="M-150 -16 L-150 54 M-140 -12 L-140 50 M-60 -4 L-60 42" stroke="#3E1E12" stroke-width="4"/>'
+              '<path d="M-60 2 C-90 -2 -120 0 -145 -8" stroke="#9A5634" stroke-width="5" fill="none" opacity="0.6"/>')
     return f'<g opacity="{op:.2f}" transform="translate({x:.0f} {y:.0f}) rotate({rot}) scale({s:.3f})">{handle}{blade}</g>'
 
 def nepal_map(op=1):

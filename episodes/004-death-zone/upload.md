@@ -41,12 +41,12 @@ Narration uses an AI voice. Visuals include AI-generated painted backgrounds; ma
 **Schedule:** Friday 13 Nov 2026, 18:00 Nepal time
 
 ## Short 1 (short_whystay.mp4) — clip 2:20.3–3:08.5
-**Title:** Why Bodies Are Left on Everest #shorts
+**Title:** Why Are Bodies Left on Everest? #shorts
 **Description:** Weight, ice, time, weather, cost: why most climbers who die on Everest can't be brought down. Full story on the channel. Narration uses an AI voice. Visuals include AI-generated painted backgrounds. #Everest #DeathZone #shorts
 **Schedule:** Saturday 14 Nov, 18:00 NPT
 
 ## Short 2 (short_greenboots.mp4) — clip 3:18.2–3:54.3
-**Title:** Everest's "Green Boots" Finally Identified #shorts
+**Title:** Who Was Everest's "Green Boots"? #shorts
 **Description:** For decades, climbers passed a landmark called Green Boots. In 2026 a DNA test named him. Full story on the channel. Narration uses an AI voice. Visuals include AI-generated painted backgrounds. #Everest #shorts
 **Schedule:** Monday 16 Nov, 18:00 NPT
 
@@ -54,10 +54,10 @@ Narration uses an AI voice. Visuals include AI-generated painted backgrounds; ma
 Sources (full links): see sources.md list. Question: Would you ever climb into the death zone?
 
 ## Short 3 (short_body.mp4) — clip 1:14.9–1:47.8
-**Title:** What the Death Zone Does to Your Body #shorts
+**Title:** What Happens to Your Body on Everest? #shorts
 **Description:** Above 8,000 m, blood oxygen drops to levels doctors see in patients close to death. Full story on the channel. Narration uses an AI voice. Visuals include AI-generated painted backgrounds. #Everest #shorts
 
 ## Short 4 (short_mallory.mp4) — clip 3:54.7–4:27.8
-**Title:** Everest's Oldest Mystery: Mallory and Irvine #shorts
+**Title:** Did Mallory Reach Everest's Top First? #shorts
 **Description:** 1924: two climbers vanished near the top. In 2024 a boot was found. Did they summit first? Full story on the channel. Narration uses an AI voice. Visuals include AI-generated painted backgrounds. #Everest #shorts
 (Schedule: see episode 003 upload.md — all 7 Shorts listed there.)
