@@ -1,6 +1,7 @@
 name: Paintings (Kaggle GPU)
 # Paints the backgrounds for one episode on Kaggle's free GPU and commits them to episodes/<ep>/bg/.
-# Needs repo secrets KAGGLE_USERNAME and KAGGLE_KEY (Kaggle → Settings → API → Create New Token).
+# Needs repo secret KAGGLE_API_TOKEN (Kaggle → Settings → API Tokens → Generate New Token).
+# Legacy KAGGLE_USERNAME + KAGGLE_KEY secrets also work.
 on:
   workflow_dispatch:
     inputs:
@@ -14,18 +15,24 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 90
     env:
-      KAGGLE_USERNAME: ${{ secrets.KAGGLE_USERNAME }}
+      KAGGLE_API_TOKEN: ${{ secrets.KAGGLE_API_TOKEN }}
+      KAGGLE_USERNAME: ${{ secrets.KAGGLE_USERNAME || 'epasal' }}
       KAGGLE_KEY: ${{ secrets.KAGGLE_KEY }}
       EP: ${{ inputs.episode }}
     steps:
       - uses: actions/checkout@v4
-      - run: pip install -q kaggle
+      - run: |
+          pip install -q "kaggle>=1.8"
+          if [ -z "$KAGGLE_KEY" ]; then echo "KAGGLE_KEY=" >> $GITHUB_ENV; fi
+          if [ -z "$KAGGLE_API_TOKEN" ] && [ -z "$KAGGLE_KEY" ]; then echo "::error::Add the KAGGLE_API_TOKEN repo secret"; exit 1; fi
       - name: Build and push kernel
         run: |
+          [ -z "$KAGGLE_KEY" ] && unset KAGGLE_KEY
           python pipeline/kaggle/make_kernel.py "$EP" "$KAGGLE_USERNAME"
           kaggle kernels push -p kernel
       - name: Wait for Kaggle
         run: |
+          [ -z "$KAGGLE_KEY" ] && unset KAGGLE_KEY
           id="$KAGGLE_USERNAME/himalaya-unfolded-paintings"
           for i in $(seq 1 160); do
             s=$(kaggle kernels status "$id" 2>&1 | tail -1); echo "$s"
