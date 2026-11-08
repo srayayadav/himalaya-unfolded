@@ -70,6 +70,10 @@ the Mac on.
    `make_short(main.mp4, start, end, title, title2)` → `short_<name>.mp4`. The clip sits in the middle
    of a 9:16 frame with a blurred background, a big title on top and "Full story on the channel" below.
    Watch both before sending. Example: `episodes/002-never-colonized/` (yam + Nalapani).
+   SHORT TITLES (Santosh, 8 Nov 2026, from first results): a curious "Why…?"/"How…?" question or a
+   strange Nepal fact, e.g. "Why Nepal Is 15 Minutes Different" (226 views day 1) and "A Yam Between
+   Two Boulders" (568), never a plain number/battle title like "600 Soldiers vs 3,500" (34). Under 50
+   chars, end with #shorts. The on-screen title in make_short follows the same rule.
 6. Make THREE thumbnails per main video for YouTube's Test & Compare (1280×720 PNG, 3–5 big words
    max, high contrast, each clearly different: e.g. map-led, character-led, big-question) →
    `thumb_a.png`, `thumb_b.png`, `thumb_c.png`.
@@ -95,6 +99,9 @@ the Mac on.
 - After he says a video is uploaded, and only if the Mac's built-in browser is reachable, you may do
   the no-file settings in YouTube Studio: playlist, end screen, pinned comment with sources and a
   question, linking each Short to its main video ("Related video"). Ask him first the first time.
+- Every Short: set "Related video" to its main video (Studio → the Short's edit page → Related video),
+  so Short viewers reach the long video, where watch hours come from. If the main video is not public
+  yet, set it as soon as it is.
 - Settings for every main video (Santosh uploads the files; you can help with the rest): English
   captions from `main.srt`; three thumbnails in Test & Compare (desktop Studio); end screen
   (subscribe + next/best video); the right playlist ("Nepal History", "Everest & Mountains", "Himalayan Mysteries", "Why Nepal?" —
