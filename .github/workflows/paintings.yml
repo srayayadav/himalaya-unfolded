@@ -1,0 +1,41 @@
+name: Paintings (Kaggle GPU)
+# Paints the backgrounds for one episode on Kaggle's free GPU and commits them to episodes/<ep>/bg/.
+# Needs repo secrets KAGGLE_USERNAME and KAGGLE_KEY (Kaggle → Settings → API → Create New Token).
+on:
+  workflow_dispatch:
+    inputs:
+      episode:
+        description: "Episode folder, e.g. 003-gurkhas"
+        required: true
+permissions:
+  contents: write
+jobs:
+  paint:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    env:
+      KAGGLE_USERNAME: ${{ secrets.KAGGLE_USERNAME }}
+      KAGGLE_KEY: ${{ secrets.KAGGLE_KEY }}
+      EP: ${{ inputs.episode }}
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install -q kaggle
+      - name: Build and push kernel
+        run: |
+          python pipeline/kaggle/make_kernel.py "$EP" "$KAGGLE_USERNAME"
+          kaggle kernels push -p kernel
+      - name: Wait for Kaggle
+        run: |
+          id="$KAGGLE_USERNAME/himalaya-unfolded-paintings"
+          for i in $(seq 1 160); do
+            s=$(kaggle kernels status "$id" 2>&1 | tail -1); echo "$s"
+            case "$s" in *COMPLETE*|*complete*) break;; *ERROR*|*error*|*CANCEL*) exit 1;; esac
+            sleep 30
+          done
+          mkdir -p out && kaggle kernels output "$id" -p out
+          mkdir -p "episodes/$EP/bg" && cp out/*.jpg "episodes/$EP/bg/"
+          ls -la "episodes/$EP/bg"
+      - name: Commit paintings
+        run: |
+          git config user.name "Santosh Kumar"; git config user.email "srayayadav@gmail.com"
+          git add "episodes/$EP/bg"; git commit -m "Paintings for $EP (Kaggle GPU)" && git push

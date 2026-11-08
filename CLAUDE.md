@@ -13,6 +13,10 @@ two-tone snow-capped mountains, prayer flags). Brand colours: deep teal night sk
 finished example.
 
 ## Weekly cycle (scheduled, Sunday morning Nepal time)
+NO MAC NEEDED (Santosh, 8 Nov 2026): the whole cycle runs in the cloud. The Mac's built-in browser is
+optional: use it for steps 0–1 (Studio analytics/Trends) only if it is reachable right away; if not,
+skip those Studio parts silently (use web search for demand) and never wait for or ask Santosh to turn
+the Mac on.
 0. Weekly report first: open YouTube Studio Analytics in the built-in browser (last 7 days and per
    video: views, watch hours, subscribers, impressions click-through rate, average view duration,
    and Test & Compare results). Keep a running log in `analytics.md`. Use it to choose topics:
@@ -47,9 +51,14 @@ finished example.
    LOOK (Santosh approved 7 Nov 2026): "painted documentary" — every non-map scene uses an AI painted
    background from the free Kaggle GPU (see `pipeline/painted.py` for the exact steps and rules) with our
    animated code characters, forts, smoke, flags and titles on top (`episodes/sample-painted/` is the
-   reference). Plan one painting per scene: write the prompts in `episodes/<ep>/paintings.md` first,
-   generate them in one Kaggle run, reject wrong ones, then build scenes. Maps stay code-drawn.
-   If the Mac or Kaggle is unavailable, fall back to `pipeline/style2.py` painted-by-code layers and say so.
+   reference). Plan one painting per scene: write the prompts in `episodes/<ep>/paintings.md` and
+   `episodes/<ep>/paintings.json` ({"name": "prompt"} or {"name": {"prompt": ..., "seed": n}}), push,
+   then run `gh workflow run paintings.yml -f episode=<ep>` (GitHub Actions drives Kaggle's GPU through
+   the Kaggle API — no Mac), wait with `gh run watch`, `git pull`, and look at every `bg/*.jpg`.
+   Reject wrong ones (people, text, pagodas/castles, wrong era): change their seed in paintings.json and
+   re-run for those only. Then build scenes. Maps stay code-drawn. The browser method in painted.py
+   is the old fallback. If the workflow fails (e.g. Kaggle secrets missing), fall back to
+   `pipeline/style2.py` painted-by-code layers and say so in one line.
    Every video must look different from the last (scene layouts, colours inside the brand, motion).
    Prefer story moments with characters, places and objects over walls of text; keep on-screen text short.
    People: use `pipeline/characters.py` (cartoon kit: JUNG_BAHADUR, PRITHVI_NARAYAN, GURKHA,
