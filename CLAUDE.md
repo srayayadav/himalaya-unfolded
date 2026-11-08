@@ -53,8 +53,8 @@ the Mac on.
    animated code characters, forts, smoke, flags and titles on top (`episodes/sample-painted/` is the
    reference). Plan one painting per scene: write the prompts in `episodes/<ep>/paintings.md` and
    `episodes/<ep>/paintings.json` ({"name": "prompt"} or {"name": {"prompt": ..., "seed": n}}), push,
-   then run `gh workflow run paintings.yml -f episode=<ep>` (GitHub Actions drives Kaggle's GPU through
-   the Kaggle API — no Mac), wait with `gh run watch`, `git pull`, and look at every `bg/*.jpg`.
+   then start it via REST (GraphQL is blocked): `gh api -X POST repos/srayayadav/himalaya-unfolded/actions/workflows/paintings.yml/dispatches -f ref=main -f "inputs[episode]=<ep>"` (GitHub Actions drives Kaggle's GPU through
+   the Kaggle API — no Mac), poll `gh api repos/srayayadav/himalaya-unfolded/actions/runs?per_page=1`, `git pull`, and look at every `bg/*.jpg`.
    Reject wrong ones (people, text, pagodas/castles, wrong era): change their seed in paintings.json and
    re-run for those only. Then build scenes. Maps stay code-drawn. The browser method in painted.py
    is the old fallback. If the workflow fails (e.g. Kaggle secrets missing), fall back to
