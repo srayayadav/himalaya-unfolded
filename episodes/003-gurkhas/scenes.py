@@ -286,12 +286,13 @@ def s10(t, d, W, H):  # selection in Pokhara, doko race
     o2 = inout(t, L(10, 2), L(10, 3) - 0.2)
     b += chip(960, 200, "POKHARA", o2, 60, GOLD)
     o3 = prog(t, L(10, 3), L(10, 3) + 0.6)
+    b += f'<g opacity="{0.97*o3:.2f}"><path d="M0 1080 L0 985 Q900 935 1920 895 L1920 1080Z" fill="#3B4A2E"/><path d="M0 1080 L0 1030 Q900 990 1920 960 L1920 1080Z" fill="#2C3823"/></g>' + (grass(0, 1920, 985, 11, 160, "#2C3823") if o3 > 0.5 else "")
     run = prog(t, L(10, 3), d)
     for i in range(3):
-        x = 200 + 1400 * run - i * 200; y = 1010 - 50 * run
+        x = 200 + 1400 * run - i * 200; y = 905 - 40 * run
         walking = o3 > 0
         b += warm(f'<g opacity="{o3:.2f}">' + doko(x - 28, y - 28 + bob(t + i, walking), 0.5) + character(x, y + bob(t + i, walking), 0.38, RECRUIT, t * 1.3 + i, flip=False) + '</g>')
-    b += f'<path d="M100 1050 L1800 990" stroke="{CREAM}" stroke-width="5" stroke-dasharray="14 14" fill="none" opacity="{0.6*o3:.2f}"/>'
+    b += f'<path d="M100 1000 L1800 930" stroke="{CREAM}" stroke-width="5" stroke-dasharray="14 14" fill="none" opacity="{0.6*o3:.2f}"/>'
     b += chip(1400, 180, "THE DOKO RACE", o3, 54, GOLD) + chip(1400, 290, "uphill · basket of sand · head strap", o3 * prog(t, L(10, 3) + 1.5, L(10, 3) + 2.2), 32)
     return fade(b, t, d, W, H)
 
