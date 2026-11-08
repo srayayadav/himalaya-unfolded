@@ -1,5 +1,10 @@
 # Analytics log (YouTube Studio, read by the channel manager)
 
+## 2026-11-08 ~19:53 NPT (Santosh's phone screenshot, Studio Overview, last 28 days)
+- Views 2.5K, watch time 8.0 h (almost all from 7–8 Nov).
+- Yam Short 1.2K · Nepal time Short 1.0K · Nalapani Short 239 · main "Never Colonized" 22 · old "Top 15 Richest Countries" 11.
+- Lesson: question/strange-fact Shorts ≈5x the battle-number Short; main video still not reached by Short viewers → set Related video on every Short.
+
 
 ## 2026-11-08 08:05 NPT (quick check)
 - Subscribers 277 (was 273 on 7 Nov). Views last 48 h: 321.
