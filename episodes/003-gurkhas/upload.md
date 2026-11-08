@@ -53,3 +53,10 @@ Narration uses an AI voice. Visuals include AI-generated painted backgrounds; ma
 
 ## Pinned comment (draft)
 Sources (full links): see sources.md list. Question: Is there a Gurkha in your family? Which regiment?
+
+## Short 3 (short_kulbir.mp4) — clip 2:44.2–3:26.8
+**Title:** The First Gurkha Victoria Cross #shorts
+**Description:** France, 1915: Rifleman Kulbir Thapa refused to leave a wounded British soldier. Full story on the channel. Narration uses an AI voice. Visuals include AI-generated painted backgrounds. #Gurkha #shorts
+
+## Shorts schedule (7 a week, one a day 18:00 NPT; 12:00 on main-video days)
+Mon 9 khukuri · Tue 10 12:00 kulbir (main ep003 18:00) · Wed 11 lachhiman · Thu 12 body (ep004) · Fri 13 12:00 whystay (main ep004 18:00) · Sat 14 greenboots · Sun 15 mallory

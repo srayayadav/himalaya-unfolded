@@ -52,3 +52,12 @@ Narration uses an AI voice. Visuals include AI-generated painted backgrounds; ma
 
 ## Pinned comment (draft)
 Sources (full links): see sources.md list. Question: Would you ever climb into the death zone?
+
+## Short 3 (short_body.mp4) — clip 1:14.9–1:47.8
+**Title:** What the Death Zone Does to Your Body #shorts
+**Description:** Above 8,000 m, blood oxygen drops to levels doctors see in patients close to death. Full story on the channel. Narration uses an AI voice. Visuals include AI-generated painted backgrounds. #Everest #shorts
+
+## Short 4 (short_mallory.mp4) — clip 3:54.7–4:27.8
+**Title:** Everest's Oldest Mystery: Mallory and Irvine #shorts
+**Description:** 1924: two climbers vanished near the top. In 2024 a boot was found. Did they summit first? Full story on the channel. Narration uses an AI voice. Visuals include AI-generated painted backgrounds. #Everest #shorts
+(Schedule: see episode 003 upload.md — all 7 Shorts listed there.)
