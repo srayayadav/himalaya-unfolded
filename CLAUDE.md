@@ -65,11 +65,12 @@ the Mac on.
    BRITISH_OFFICER, or a new look dict). Give them blinking, talking mouth while their part is
    narrated, gestures, and walking/entering motion. Always show a name label. Historical people only,
    drawn respectfully and stylized (costume, not a portrait likeness); never living people.
-5. Make TWO Shorts per main video by clipping it: pick the two strongest self-contained moments
+5. Make SEVEN Shorts a week (Santosh, 8 Nov 2026: Shorts were doing well): 4 from one main video and
+   3 from the other, by clipping them: pick the strongest self-contained moments
    (30–55 s each, starting at a beat start so the narration begins cleanly), and run
    `make_short(main.mp4, start, end, title, title2)` → `short_<name>.mp4`. The clip sits in the middle
    of a 9:16 frame with a blurred background, a big title on top and "Full story on the channel" below.
-   Watch both before sending. Example: `episodes/002-never-colonized/` (yam + Nalapani).
+   Watch every one before sending. Example: `episodes/002-never-colonized/` (yam + Nalapani).
    SHORT TITLES (Santosh, 8 Nov 2026, from first results): a curious "Why…?"/"How…?" question or a
    strange Nepal fact, e.g. "Why Nepal Is 15 Minutes Different" (226 views day 1) and "A Yam Between
    Two Boulders" (568), never a plain number/battle title like "600 Soldiers vs 3,500" (34). Under 50
@@ -83,7 +84,7 @@ the Mac on.
 7b. Also draft (do not post) one share post per main video for Santosh to post himself in Nepali
    diaspora Facebook groups or r/Nepal — short, honest, no spam, max 1–2 posts a week in total.
 8. Commit and push everything except large renders (`*.mp4` is git-ignored; keep them in the session).
-9. Send Santosh the two main videos, four Shorts and thumbnails with `SendUserFile`, plus one
+9. Send Santosh the two main videos, seven Shorts and thumbnails with `SendUserFile`, plus one
    `SendUserMessage` in Roman Nepali listing titles and asking: approve, or what to change.
    Send a push notification so it reaches his phone. Then wait for his answer in this session.
 
@@ -94,8 +95,9 @@ the Mac on.
   ready-to-copy block per file: title, description, tags, playlist name, publish day/time, "Not made
   for kids", and which thumbnail to use (thumb_a; mention thumb_b/c for Test & Compare on desktop).
   Also send the .srt caption file. Do not try to upload files yourself.
-- Suggested schedule: main videos Tuesday and Friday 18:00 Nepal time, the four Shorts Monday,
-  Wednesday, Thursday and Saturday 18:00 (each Short after its main video when possible).
+- Suggested schedule: main videos Tuesday and Friday 18:00 Nepal time; one Short every day at 18:00
+  (7 a week; on Tuesday/Friday post the Short at 12:00 so it doesn't clash with the main video). Put
+  Shorts from a main video after that video goes public when possible, so "Related video" works.
 - After he says a video is uploaded, and only if the Mac's built-in browser is reachable, you may do
   the no-file settings in YouTube Studio: playlist, end screen, pinned comment with sources and a
   question, linking each Short to its main video ("Related video"). Ask him first the first time.
