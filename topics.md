@@ -17,10 +17,12 @@ YouTube Studio Trends check, 7 Nov 2026 (Analytics → Trends; volumes are YouTu
 - Mount Everest: "mount everest climbing video" = HIGH; fresh uploads getting ~300K in a day.
 - Yeti: search is dominated by the YETI cooler brand — weak; use "Abominable Snowman" wording, low priority.
 
+Check 8 Nov 2026: Studio Trends page would not load in the built-in browser; used the 7 Nov labels above. Web check: Gurkhas in the
+news mainly for veterans' pension disputes (current politics — kept out of the video); Everest 2026 season news (record 1,008
+summits, Green Boots DNA identification July 2026) makes the Death Zone topic timely.
+
 ## Backlog (in order)
-- H — The Gurkhas: Why Armies Feared Them  ← promised at the end of episode 002, make this next
-- E — The Death Zone: Why Bodies Stay on Everest (respectful, no graphic images; HIGH search)
-- E — Why Lukla Is the World's Most Dangerous Airport (HIGH search)
+- E — Why Lukla Is the World's Most Dangerous Airport (HIGH search)  ← promised at the end of episode 004, make this next
 - H — How Prithvi Narayan Shah Unified Nepal
 - E — Everest's Record Year: Why 1,000+ People Reached the Top in 2026 (queues, fees, new rules — check facts carefully)
 - W — Why Nepal's Flag Isn't a Rectangle
@@ -38,6 +40,8 @@ YouTube Studio Trends check, 7 Nov 2026 (Analytics → Trends; volumes are YouTu
 - W — Why Nepal Has So Many Rivers (and so much hydropower potential)
 
 ## In production
+- H — The Gurkhas: Why Armies Feared Them (episode 003, 8 Nov 2026)
+- E — The Death Zone: Why Bodies Stay on Everest (episode 004, 8 Nov 2026)
 
 ## Done
 - W — Why Nepal's Time Is 15 Minutes Off (37-second pilot, 7 Nov 2026 → first Short)

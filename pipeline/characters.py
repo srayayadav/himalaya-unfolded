@@ -28,6 +28,13 @@ def _hat(kind, c1, c2):
     if kind == "topi":      # Nepali dhaka-style topi
         return (f'<path d="M-58 -150 L-50 -195 Q0 -205 56 -190 L58 -150Z" fill="{c1}"/>'
                 + "".join(f'<path d="M{x} -190 l10 12 l-10 12 l-10 -12Z" fill="{c2}"/>' for x in (-30, 0, 30)))
+    if kind == "brodie":    # WWI steel helmet (British "Brodie")
+        return (f'<ellipse cx="0" cy="-168" rx="92" ry="16" fill="{c1}"/>'
+                f'<path d="M-58 -170 Q-54 -222 0 -224 Q54 -222 58 -170Z" fill="{c1}"/>'
+                f'<path d="M-58 -170 L58 -170" stroke="{c2}" stroke-width="5"/>')
+    if kind == "flatcap":   # 1920s mountaineer's cloth hat
+        return (f'<path d="M-60 -160 Q-58 -212 0 -214 Q58 -212 62 -160Z" fill="{c1}"/>'
+                f'<path d="M-62 -160 Q0 -150 70 -150 L92 -146 Q40 -136 -62 -150Z" fill="{c2}"/>')
     return ""
 
 def character(x, y, s=1.0, look=None, t=0.0, talking=False, gesture=0.0, flip=False, op=1.0):
@@ -76,3 +83,9 @@ GURKHA = dict(skin="mid", coat="#3E5A3A", trim="#C9B27A", hat="slouch", hat1="#4
               mustache=False, sword=False)
 BRITISH_OFFICER = dict(skin="light", coat="#B3261E", trim="#F2D27A", hat="bicorne", hat1="#1E1A18", hat2="#F2D27A",
                        mustache=True, sideburns=True, medals=2, sword=True)
+# Added for episodes 003-004 (8 Nov 2026)
+GURKHA_WW1 = dict(skin="mid", coat="#7A6A45", trim="#B9A576", hat="slouch", hat1="#6E6040", hat2="#2A2A2A", mustache=False)
+TOMMY_WW1 = dict(skin="light", coat="#7D7148", trim="#A99A6A", hat="brodie", hat1="#5A5A4A", hat2="#3A3A30", mustache=True)
+GURKHA_WW2 = dict(skin="mid", coat="#4E5B3A", trim="#8C9468", hat="slouch", hat1="#55603E", hat2="#2A2A2A", mustache=False)
+RECRUIT = dict(skin="mid", coat="#2E5E8C", trim="#D9E2EA", hat="none", mustache=False)
+MOUNTAINEER_1924 = dict(skin="light", coat="#8A6A4A", trim="#C9B28A", hat="flatcap", hat1="#6A5440", hat2="#5A4636", mustache=False)
