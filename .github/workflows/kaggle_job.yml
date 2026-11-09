@@ -6,6 +6,7 @@ on:
       script: {description: "Job script path, e.g. pipeline/kaggle/jobs/motion_sample.py", required: true}
       files: {description: "Comma-separated repo files to embed (optional)", required: false, default: ""}
       out: {description: "Repo folder for results", required: true}
+      fetch_only: {description: "Only download the last job's outputs (no new run)", required: false, default: "no"}
 permissions:
   contents: write
 jobs:
@@ -19,13 +20,14 @@ jobs:
       - uses: actions/checkout@v4
       - run: pip install -q "kaggle>=1.8"
       - name: Push job
+        if: inputs.fetch_only != 'yes'
         run: |
           python pipeline/kaggle/make_job.py "${{ inputs.script }}" "$KAGGLE_USERNAME" "${{ inputs.files }}"
           kaggle kernels push -p kernel
       - name: Wait and fetch
         run: |
           id="$KAGGLE_USERNAME/himalaya-unfolded-job"
-          sleep 60
+          if [ "${{ inputs.fetch_only }}" != "yes" ]; then sleep 60; fi
           for i in $(seq 1 660); do
             s=$(kaggle kernels status "$id" 2>&1 | tail -1); echo "$s"
             case "$s" in *COMPLETE*|*complete*) break;; *ERROR*|*error*|*CANCEL*) echo "::warning::Kaggle job failed; fetching partial outputs"; break;; esac
@@ -36,4 +38,4 @@ jobs:
       - name: Commit
         run: |
           git config user.name "Santosh Kumar"; git config user.email "srayayadav@gmail.com"
-          git add "${{ inputs.out }}"; git commit -m "Kaggle job results: ${{ inputs.out }}" && git push
+          git add -f "${{ inputs.out }}"; git commit -m "Kaggle job results: ${{ inputs.out }}" && git push
