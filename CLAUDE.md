@@ -25,6 +25,11 @@ finished example.
 - Claude's usage is limited and needed for ePasal: no scheduled YouTube tasks (both are OFF), no
   unrequested checks or reports. Work only when Santosh sends a zip or asks.
 - YouTube setting for realistic AI visuals: Altered/synthetic content = Yes.
+- n8n (Santosh's cloud trial, himalayaunfolded.app.n8n.cloud, trial ends ~23 Nov 2026): HU-01 script generator,
+  HU-02 Gemini TTS + subtitles → Google Drive (paid-TTS gate `approve_paid_tts` must stay false unless he
+  approves a run), HU-03 YouTube upload webhook (built 9 Nov, DEACTIVATED: n8n's shared Google project hits
+  YouTube's daily upload quota; an own Google Cloud project would need YouTube's API audit). Decision
+  9 Nov: uploads stay MANUAL by Santosh with copy-ready text from Claude.
 
 ## Weekly cycle (OLD, scheduled tasks now off — kept for reference)
 NO MAC NEEDED (Santosh, 8 Nov 2026): the whole cycle runs in the cloud. The Mac's built-in browser is
