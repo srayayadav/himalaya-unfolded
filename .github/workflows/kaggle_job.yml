@@ -27,8 +27,8 @@ jobs:
       - name: Wait and fetch
         run: |
           id="$KAGGLE_USERNAME/himalaya-unfolded-job"
-          if [ "${{ inputs.fetch_only }}" != "yes" ]; then sleep 60; fi
-          for i in $(seq 1 660); do
+          if [ "${{ inputs.fetch_only }}" != "yes" ]; then sleep 60; N=660; else N=0; fi
+          for i in $(seq 1 $N); do
             s=$(kaggle kernels status "$id" 2>&1 | tail -1); echo "$s"
             case "$s" in *COMPLETE*|*complete*) break;; *ERROR*|*error*|*CANCEL*) echo "::warning::Kaggle job failed; fetching partial outputs"; break;; esac
             sleep 30
