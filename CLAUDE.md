@@ -131,5 +131,8 @@ the Mac on.
 - No current politics, religion controversies, gore. No copyrighted images/music/clips, no photos of
   real people. Public-domain sources only (Wikimedia Commons PD) if a real image is truly needed.
 - Never enter passwords; if YouTube asks Santosh to sign in or verify, stop and ask him.
-- Don't spend money. Stay on free tools.
+- Don't spend money, with ONE exception (Santosh, 9 Nov 2026): the fal.ai API (key in GitHub secret
+  FAL_KEY) for realistic images and AI motion clips, max $20 per calendar month. Every paid call goes
+  through the ledger in `budget.json` (pipeline refuses calls that would pass $20); free tools first
+  (Kaggle), paid only for key shots. Never raise the limit without Santosh's explicit OK in chat.
 - Monetisation target: 1,000 subscribers + 8,000 watch hours (new-applicant rule from 1 Feb 2027).
