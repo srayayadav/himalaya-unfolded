@@ -12,7 +12,21 @@ two-tone snow-capped mountains, prayer flags). Brand colours: deep teal night sk
 `#FFD98A`, cream `#F3DCC0`. Toolkit: `pipeline/hu.py`. Look at `episodes/001-nepal-time/` for a
 finished example.
 
-## Weekly cycle (scheduled, Sunday morning Nepal time)
+## NEW WORKFLOW (Santosh, 9 Nov 2026) — this overrides the weekly cycle below
+- Look: REALISTIC documentary (Santosh loved `episodes/sample-real/realistic_sample_small.mp4`). The painted
+  + cartoon style is retired.
+- Work split: ChatGPT (Santosh's app) delivers research, script, shot list, photoreal images, thumbnails
+  and upload text in the format of `CHATGPT_FORMAT.md` as one zip. Santosh attaches it in Claude and
+  says "video banau". Claude then: narrate (`hu.narrate`, am_michael), motion for `motion` shots (Wan 2.2
+  via `kaggle_job.yml`, see `pipeline/kaggle/jobs/real_sample.py`; images in, `_wan.mp4` out), maps
+  (Natural Earth, `hu.country_path`), assemble with `pipeline/realcut.py` (Ken Burns, flash/fade,
+  yellow word captions, grain, ambient bed), 3–4 Shorts with `make_short`, chapters into upload text,
+  send files. Check every image for accuracy first (khukuri shape, hats, architecture); flag bad ones.
+- Claude's usage is limited and needed for ePasal: no scheduled YouTube tasks (both are OFF), no
+  unrequested checks or reports. Work only when Santosh sends a zip or asks.
+- YouTube setting for realistic AI visuals: Altered/synthetic content = Yes.
+
+## Weekly cycle (OLD, scheduled tasks now off — kept for reference)
 NO MAC NEEDED (Santosh, 8 Nov 2026): the whole cycle runs in the cloud. The Mac's built-in browser is
 optional: use it for steps 0–1 (Studio analytics/Trends) only if it is reachable right away; if not,
 skip those Studio parts silently (use web search for demand) and never wait for or ask Santosh to turn
