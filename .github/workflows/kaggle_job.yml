@@ -1,0 +1,39 @@
+name: Kaggle GPU job
+# Runs pipeline/kaggle/jobs/<script>.py on Kaggle's free GPU and commits /kaggle/working/out/* to <out>.
+on:
+  workflow_dispatch:
+    inputs:
+      script: {description: "Job script path, e.g. pipeline/kaggle/jobs/motion_sample.py", required: true}
+      files: {description: "Comma-separated repo files to embed (optional)", required: false, default: ""}
+      out: {description: "Repo folder for results", required: true}
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    env:
+      KAGGLE_API_TOKEN: ${{ secrets.KAGGLE_API_TOKEN }}
+      KAGGLE_USERNAME: ${{ secrets.KAGGLE_USERNAME || 'epasal' }}
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install -q "kaggle>=1.8"
+      - name: Push job
+        run: |
+          python pipeline/kaggle/make_job.py "${{ inputs.script }}" "$KAGGLE_USERNAME" "${{ inputs.files }}"
+          kaggle kernels push -p kernel
+      - name: Wait and fetch
+        run: |
+          id="$KAGGLE_USERNAME/himalaya-unfolded-job"
+          sleep 60
+          for i in $(seq 1 220); do
+            s=$(kaggle kernels status "$id" 2>&1 | tail -1); echo "$s"
+            case "$s" in *COMPLETE*|*complete*) break;; *ERROR*|*error*|*CANCEL*) kaggle kernels output "$id" -p log || true; tail -c 4000 log/*.log || true; exit 1;; esac
+            sleep 30
+          done
+          mkdir -p res && kaggle kernels output "$id" -p res
+          mkdir -p "${{ inputs.out }}" && cp -r res/out/* "${{ inputs.out }}/" && ls -la "${{ inputs.out }}"
+      - name: Commit
+        run: |
+          git config user.name "Santosh Kumar"; git config user.email "srayayadav@gmail.com"
+          git add "${{ inputs.out }}"; git commit -m "Kaggle job results: ${{ inputs.out }}" && git push
