@@ -1,7 +1,7 @@
 # Kaggle GPU job: realistic stills (RealVisXL V5.0, SDXL fine-tune, CreativeML Open RAIL++-M:
 # commercial use OK) + motion clips (Wan 2.2 TI2V-5B, Apache-2.0; falls back to SVD-XT if Wan fails
 # or is too slow on the T4). Outputs to /kaggle/working/out/.
-import subprocess, sys, time, os, json
+import subprocess, sys, time, os, json, gc
 subprocess.run([sys.executable, "-m", "pip", "install", "-q", "-U", "diffusers>=0.35", "transformers", "accelerate",
                 "ftfy", "imageio", "imageio-ffmpeg"], check=True)
 import torch
@@ -40,8 +40,9 @@ for name, p in SHOTS.items():
                   width=1344, height=768, generator=g).images[0]
         im.save(f"{OUT}/{name}_s{seed}.jpg", quality=93)
     print("still", name, round(time.time() - t0), "s", flush=True)
-del pipe; torch.cuda.empty_cache()
+del pipe; gc.collect(); torch.cuda.empty_cache()
 log["stills_s"] = round(time.time() - t0)
+json.dump(log, open(f"{OUT}/log.json", "w"), indent=1)
 
 def wan_clip(name, prompt, budget_s):
     from diffusers import WanImageToVideoPipeline, AutoencoderKLWan
@@ -49,12 +50,13 @@ def wan_clip(name, prompt, budget_s):
     t = time.time()
     vae = AutoencoderKLWan.from_pretrained("Wan-AI/Wan2.2-TI2V-5B-Diffusers", subfolder="vae", torch_dtype=torch.float32)
     wp = WanImageToVideoPipeline.from_pretrained("Wan-AI/Wan2.2-TI2V-5B-Diffusers", vae=vae, torch_dtype=torch.float16)
-    wp.enable_model_cpu_offload()
+    wp.enable_sequential_cpu_offload(); vae.enable_tiling()
     img = Image.open(f"{OUT}/{name}_s11.jpg").convert("RGB").resize((832, 480))
     fr = wp(image=img, prompt=prompt + ", cinematic, realistic, subtle natural motion",
             negative_prompt="static, distorted, morphing faces, extra limbs, text, blurry",
-            height=480, width=832, num_frames=49, num_inference_steps=30, guidance_scale=5.0).frames[0]
+            height=480, width=832, num_frames=33, num_inference_steps=25, guidance_scale=5.0).frames[0]
     export_to_video(fr, f"{OUT}/{name}_wan.mp4", fps=16)
+    del wp, vae; gc.collect(); torch.cuda.empty_cache()
     return round(time.time() - t)
 
 used_wan = False
@@ -67,6 +69,7 @@ try:
             log[f"wan_{n}_s"] = wan_clip(n, MOTION[n], 1500); print("wan", n, "done", flush=True)
 except Exception as e:
     log["wan_error"] = repr(e)[:500]; print("WAN FAILED", e, flush=True)
+gc.collect(); torch.cuda.empty_cache()
 
 if not used_wan or "wan_h3_march_s" not in log:
     from diffusers import StableVideoDiffusionPipeline
@@ -76,10 +79,14 @@ if not used_wan or "wan_h3_march_s" not in log:
     for n in MOTION:
         if os.path.exists(f"{OUT}/{n}_wan.mp4"): continue
         src = Image.open(f"{OUT}/{n}_s11.jpg").convert("RGB").resize((1024, 576))
-        frames = sp(src, num_frames=25, decode_chunk_size=2, motion_bucket_id=110, noise_aug_strength=0.02,
-                    generator=torch.manual_seed(7)).frames[0]
+        try:
+            frames = sp(src, num_frames=25, decode_chunk_size=1, motion_bucket_id=110, noise_aug_strength=0.02,
+                        generator=torch.manual_seed(7)).frames[0]
+        except Exception as e:
+            log[f"svd_{n}_error"] = repr(e)[:300]; gc.collect(); torch.cuda.empty_cache(); continue
         os.makedirs(f"{OUT}/{n}_svd", exist_ok=True)
         for i, f in enumerate(frames): f.save(f"{OUT}/{n}_svd/{i:02d}.jpg", quality=93)
+        json.dump(log, open(f"{OUT}/log.json", "w"), indent=1)
         print("svd", n, "done", flush=True)
 json.dump(log, open(f"{OUT}/log.json", "w"), indent=1)
 print("ALL DONE", log, flush=True)

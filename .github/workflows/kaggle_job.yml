@@ -28,11 +28,11 @@ jobs:
           sleep 60
           for i in $(seq 1 660); do
             s=$(kaggle kernels status "$id" 2>&1 | tail -1); echo "$s"
-            case "$s" in *COMPLETE*|*complete*) break;; *ERROR*|*error*|*CANCEL*) kaggle kernels output "$id" -p log || true; tail -c 4000 log/*.log || true; exit 1;; esac
+            case "$s" in *COMPLETE*|*complete*) break;; *ERROR*|*error*|*CANCEL*) echo "::warning::Kaggle job failed; fetching partial outputs"; break;; esac
             sleep 30
           done
           mkdir -p res && kaggle kernels output "$id" -p res
-          mkdir -p "${{ inputs.out }}" && cp -r res/out/* "${{ inputs.out }}/" && ls -la "${{ inputs.out }}"
+          mkdir -p "${{ inputs.out }}" && cp -r res/out/* "${{ inputs.out }}/" || true; tail -c 3000 res/*.log || true; ls -la "${{ inputs.out }}"
       - name: Commit
         run: |
           git config user.name "Santosh Kumar"; git config user.email "srayayadav@gmail.com"
