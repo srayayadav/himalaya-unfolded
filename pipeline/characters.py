@@ -37,9 +37,24 @@ def _hat(kind, c1, c2):
                 f'<path d="M-62 -160 Q0 -150 70 -150 L92 -146 Q40 -136 -62 -150Z" fill="{c2}"/>')
     return ""
 
+def _gear(trim):
+    """Soldier's kit: webbing belt with brass buckle, shoulder strap, pockets, and a khukuri in its
+    curved black scabbard worn at the front of the belt (handle up, blade curving down)."""
+    return ('<path d="M-60 -68 L62 100" stroke="#5B4A2E" stroke-width="13"/>'
+            '<rect x="-78" y="92" width="156" height="22" rx="4" fill="#5B4A2E"/>'
+            '<rect x="-14" y="90" width="28" height="26" rx="4" fill="#C9A04A" stroke="#7A5A1A" stroke-width="3"/>'
+            f'<rect x="-58" y="-10" width="36" height="30" rx="4" fill="none" stroke="{trim}" stroke-width="3" opacity="0.8"/>'
+            f'<rect x="24" y="-10" width="36" height="30" rx="4" fill="none" stroke="{trim}" stroke-width="3" opacity="0.8"/>'
+            '<g transform="translate(46 96) scale(-0.62 0.62) rotate(-8)">'
+            '<path d="M0 -14 C50 -18 96 -6 128 26 C150 50 162 84 166 112 C140 118 112 104 98 82 C82 56 56 22 0 16Z" fill="#1E1714" stroke="#000" stroke-width="2"/>'
+            '<path d="M150 96 L168 118 L146 110Z" fill="#C9A04A"/>'
+            '<path d="M-4 -16 L-14 -16 L-14 18 L-4 18Z" fill="#C9A04A"/>'
+            '<path d="M-14 -14 C-40 -16 -60 -12 -74 -20 L-86 -26 L-90 30 L-74 26 C-60 20 -40 20 -14 16Z" fill="#6B3420" stroke="#3E1E12" stroke-width="2"/>'
+            '</g>')
+
 def character(x, y, s=1.0, look=None, t=0.0, talking=False, gesture=0.0, flip=False, op=1.0):
     L = dict(skin="mid", coat="#7A1F2B", trim="#E2B44D", hat="topi", hat1="#2B2F4A", hat2="#E2B44D",
-             mustache=True, sideburns=False, beard=False, sash=None, medals=0, sword=False)
+             mustache=True, sideburns=False, beard=False, sash=None, medals=0, sword=False, gear=False)
     L.update(look or {})
     sk = SKIN.get(L["skin"], L["skin"])
     breathe = 1 + 0.012 * math.sin(t * 2.2)
@@ -58,6 +73,7 @@ def character(x, y, s=1.0, look=None, t=0.0, talking=False, gesture=0.0, flip=Fa
   <path d="M-62 190 L-58 290 L-18 290 L-10 190Z M10 190 L18 290 L58 290 L62 190Z" fill="#E9E4D8"/>
   <path d="M-64 285 L-12 285 L-10 305 L-70 305Z M12 285 L64 285 L70 305 L10 305Z" fill="#2A1E18"/>
   {f'<path d="M-70 120 Q-120 200 -150 230" stroke="#C9CFD6" stroke-width="10" fill="none"/><circle cx="-70" cy="118" r="10" fill="#E2B44D"/>' if L['sword'] else ''}
+  {_gear(L['trim']) if L['gear'] else ''}
 </g>
 <g transform="translate(-72 -55) rotate(18)"><rect x="-18" y="0" width="36" height="140" rx="18" fill="{L['coat']}"/><circle cx="0" cy="145" r="17" fill="{sk}"/></g>
 <g transform="translate(72 -55) rotate({arm:.1f})"><rect x="-18" y="0" width="36" height="140" rx="18" fill="{L['coat']}"/><circle cx="0" cy="145" r="17" fill="{sk}"/></g>
@@ -80,7 +96,7 @@ JUNG_BAHADUR = dict(skin="mid", coat="#1F3A5F", trim="#E2B44D", hat="shirpech", 
 PRITHVI_NARAYAN = dict(skin="mid", coat="#F2EDE2", trim="#B8862B", hat="topi", hat1="#5A2A2A", hat2="#E2B44D",
                        mustache=True, sash="#7A1F2B", sword=True)
 GURKHA = dict(skin="mid", coat="#3E5A3A", trim="#C9B27A", hat="slouch", hat1="#4A5A3A", hat2="#2A2A2A",
-              mustache=False, sword=False)
+              mustache=False, sword=False, gear=True)
 BRITISH_OFFICER = dict(skin="light", coat="#B3261E", trim="#F2D27A", hat="bicorne", hat1="#1E1A18", hat2="#F2D27A",
                        mustache=True, sideburns=True, medals=2, sword=True)
 # Added for episodes 003-004 (8 Nov 2026)
