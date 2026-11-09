@@ -1,0 +1,64 @@
+HIMALAYA UNFOLDED — EP005
+MOTION SHOT LIST (12 SHOTS)
+Visual rule: AI images are illustrative reconstructions, not real Lukla archival photographs. For factual airport geography, intercut licensed real Lukla footage and accurate CAAN maps. 16:9, 1920×1080 master timeline. Keep aircraft model and lighting consistent where practical.
+
+S01 — ESTABLISHING APPROACH (6–8 sec)
+Motion: A small twin-engine STOL turboprop approaches the Himalayan valley from a distant wide aerial view. Camera tracks forward and slightly descends; cloud wisps drift across ridges. Aircraft movement must be smooth and physically plausible. Avoid showing a false close landing.
+Sound: distant propeller hum, soft mountain wind.
+Transition: fast cut into runway reveal.
+
+S02 — LUKLA LOCATION REVEAL (5–7 sec)
+Motion: Drone-style aerial move over a steep Himalayan settlement toward the airfield. Slow left-to-right parallax reveals the valley and mountain walls.
+Overlay: real map inset locating Lukla in Solukhumbu, Nepal; use Natural Earth borders and verified coordinates.
+Sound: low wind ambience.
+
+S03 — 1964 SUPPLY ROUTE RECONSTRUCTION (6 sec)
+Motion: Period-appropriate porters walk slowly along a rocky Khumbu trail carrying woven baskets and supplies. Camera follows from behind at walking pace; clothing and props remain historically plausible.
+Disclosure: “AI reconstruction — 1960s Khumbu”.
+Sound: footsteps, wind, basket creak.
+
+S04 — AIRSTRIP CONSTRUCTION (5–6 sec)
+Motion: Wide historical reconstruction of workers clearing and levelling a rough mountain airstrip in 1964. Subtle human movement, dust and wind; no modern machinery unless historically verified.
+Disclosure: “AI historical reconstruction”.
+Sound: muted work ambience.
+
+S05 — RUNWAY LENGTH (5 sec)
+Motion: Use a genuine overhead Lukla runway image or accurately sourced map. Animate a clean measurement line along the 527 m runway; add 20 m width callout. Do not ask image AI to invent text or geometry.
+Sound: soft whoosh on measurements.
+
+S06 — RUNWAY SLOPE AND DIRECTION (6–8 sec)
+Motion: Use CAAN/report-derived runway diagram. Animate a side-profile line rising 11.75% toward Runway 06; directional arrows show LAND 06 / TAKE OFF 24. Do not use an unverified aerial angle as a technical diagram.
+Sound: subtle low-frequency rise.
+
+S07 — AIRCRAFT PERFORMANCE / THIN AIR (6 sec)
+Motion: Close-up of propeller rotating at idle, then transition to clean scientific graphic of air density decreasing with altitude. Particles spread gradually; labels are added in edit, not AI-generated.
+Sound: propeller idle and soft air rush.
+
+S08 — MOUNTAIN WEATHER (7–9 sec)
+Motion: Time-lapse clouds move through the valley and wrap around ridgelines; foreground trees move gently in wind. Camera locked or slow pan. Avoid impossible storm effects.
+Sound: wind increases gently; low atmospheric bed.
+
+S09 — 2017 INVESTIGATION CONTEXT (6 sec)
+Motion: Slow camera move over a printed copy of the official Government of Nepal accident report, airport diagram and weather notes. No wreckage close-ups or graphic imagery.
+On-screen label: “Goma Air 409 | 27 May 2017 | Official investigation”.
+Sound: quiet paper movement; music drops back.
+
+S10 — APPROACH TERRAIN / GO-AROUND LIMITATION (6–8 sec)
+Motion: Accurate terrain profile/map showing the approach corridor and rising terrain beyond the Runway 06 end. Animate a simple aircraft path and a highlighted “terrain constraint” zone. Source diagram from official report; no invented flight path.
+Sound: subtle tension pulse, no crash sound.
+
+S11 — AIRPORT AS COMMUNITY LIFELINE (6–8 sec)
+Motion: Real licensed footage preferred: ground crew unloading supplies, trekkers walking through Lukla, village activity. If AI reconstruction is used, depict generic community activity respectfully and do not claim it is real footage.
+Sound: village ambience, footsteps, light wind.
+
+S12 — CLOSING DEPARTURE (7–9 sec)
+Motion: Wide view of a small aircraft departing into the valley; camera gently tracks upward as it recedes, clouds drift, warm light opens across the peaks. Use genuine licensed Lukla footage if possible.
+Sound: propeller fades into soft ambient music; dissolve to end screen.
+
+GLOBAL MOTION / EDITING RULES
+- Generate 10–20 genuine moving clips where the chosen free image-to-video workflow permits; otherwise use licensed real footage for motion-heavy scenes.
+- Avoid fake cockpit POV, fabricated ATC dialogue, crash reenactment, inaccurate runway markings, impossible aircraft movement, and AI-generated map borders.
+- Use gentle 35mm documentary grade, muted warm highlights, light grain, restrained vignette.
+- Captions: bold yellow #FFE14D, black outline, 2–3 words at a time, bottom centre.
+- Sound mix: narration target around -14 LUFS integrated; keep music and effects below narration.
+- Transitions: soft fades; reserve warm light-flash for major chapter changes.

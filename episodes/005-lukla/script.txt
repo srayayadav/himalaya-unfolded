@@ -1,0 +1,132 @@
+HIMALAYA UNFOLDED — EPISODE 005
+WHY LUKLA IS THE WORLD'S MOST DANGEROUS AIRPORT
+Target runtime: 8–10 minutes | English narration | Documentary reconstruction
+
+EDITORIAL NOTE
+“World's most dangerous” is a popular description, not a verified universal ranking. The documentary explains why Lukla is exceptionally challenging without claiming an official global number-one ranking. All generated visuals are illustrative AI reconstructions, not archival or genuine accident footage.
+
+[S01] OPEN — THE RUNWAY IN THE CLOUDS
+Imagine flying toward a mountain airport where the runway is only 527 metres long. The valley is narrow. The terrain rises sharply around the approach. Clouds can hide the ridgelines, and the runway itself climbs uphill.
+
+This is Tenzing-Hillary Airport at Lukla, in Nepal's Khumbu region — the gateway used by many people travelling toward Mount Everest.
+
+It is often called the world's most dangerous airport. But that phrase needs context: there is no single universally accepted official ranking that proves Lukla is number one. What is documented is unusual enough. Its short, sloping runway, one-way operating pattern, high elevation, surrounding terrain and fast-changing mountain weather combine to make operations demanding.
+
+So what makes this small airport so challenging — and why does it remain essential to life in the Himalayas?
+
+[S02] WHERE LUKLA IS — AND WHY IT MATTERS
+Lukla sits in Solukhumbu District, in eastern Nepal, within the Khumbu region. On a map, it is a small settlement surrounded by steep valleys and high mountain ridges. The airport is not a large international hub. It is a compact mountain airfield serving a remote region.
+
+For trekkers, Lukla is a familiar starting point for journeys toward Namche Bazaar and the Everest region. For local communities, its role is much more practical: it connects people and supplies with places where road access is limited or absent.
+
+The airport's importance is not measured only by tourism. It is part of the transport network that supports local livelihoods, services and emergency access. To understand its risks, we first need to understand why it was built.
+
+[S03] BUILT AS A LIFELINE
+The Himalayan Trust records that Lukla's airstrip was built in 1964 under Sir Edmund Hillary's initiative. Its original purpose was to make it easier to transport supplies for the Trust's school and hospital projects in the Khumbu.
+
+Before the airstrip, the Trust says supplies from Kathmandu could require more than three weeks of difficult trekking by porters. An air connection changed that equation.
+
+The airport was later renamed Tenzing-Hillary Airport in 2008, honouring Tenzing Norgay and Edmund Hillary. Its story is therefore not simply one of daring landings. It began as an effort to connect remote communities with essential supplies.
+
+But the geography that made an airstrip so valuable also made the engineering difficult.
+
+[S04] 527 METRES — A VERY SHORT RUNWAY
+The Government of Nepal's investigation report describes Lukla as a short-takeoff-and-landing airfield with a bitumen runway measuring 527 metres long and 20 metres wide.
+
+That is a remarkably compact strip for aircraft operations. There is little spare pavement compared with the long runways found at major airports.
+
+The same report describes the runway as sloping uphill from Runway 06, with a gradient of 11.75 percent. The runway orientation is 06/24.
+
+Those numbers are not just trivia. They shape how aircraft use the airport. According to the Civil Aviation Authority of Nepal's Lukla operations manual, aircraft land on Runway 06 and take off from Runway 24.
+
+In other words, the normal pattern is directional: landing uphill, departure downhill. The slope is part of the airport's operating design.
+
+[S05] WHY THE SLOPE MATTERS
+Think about the runway from the side. It rises as an arriving aircraft moves along it. That uphill gradient helps the aircraft decelerate during the landing roll. For departure, the aircraft uses the opposite direction, moving downhill as it accelerates.
+
+This is not a trick that removes risk. It is a runway arrangement shaped by the terrain, and it requires pilots and operators to follow the published procedures.
+
+At Lukla, the runway is also surrounded by steep terrain. The official accident investigation report notes high ground beyond the Runway 06 end and explains that a standard go-around is not possible once the final approach is committed.
+
+That is a crucial distinction. It does not mean every approach is automatically unsafe, or that pilots cannot make decisions earlier in the approach. It means the final approach has a terrain constraint that makes planning, weather assessment and decision-making especially important.
+
+[S06] HIGH ELEVATION — THIN AIR
+The airport elevation is about 2,846 metres above mean sea level, according to Nepal's aeronautical information data.
+
+At higher elevations, air density is lower. The Federal Aviation Administration explains that less-dense air reduces engine power, propeller thrust and wing lift. It can also increase the runway distance needed for takeoff and landing and reduce climb performance.
+
+The exact effect depends on temperature, pressure, humidity, aircraft type, weight and other conditions. Pilots use aircraft-specific performance data rather than relying on a simple rule of thumb.
+
+At an airport with a short runway and rising terrain nearby, those performance calculations matter. Aircraft must be suitable for the field, and their loading and operating conditions must stay within approved limits.
+
+[S07] MOUNTAIN WEATHER — THE MOVING WALL
+Weather in mountainous terrain is not simply a matter of looking up and deciding whether the sky appears blue. Clouds can form around ridges and move through valleys. Visibility can vary from one part of the approach to another.
+
+The Civil Aviation Authority of Nepal's Lukla operations manual sets out local weather and traffic procedures. It warns that fog or cloud in critical areas can lead to the airport being closed, and it instructs staff to pass deteriorating-weather information to arriving aircraft.
+
+That is why delays and cancellations are part of mountain flying. A flight that does not depart may disappoint passengers, but waiting for suitable conditions is a safety decision.
+
+The airport's challenges are not just about the runway. They are about the runway, terrain and weather interacting at the same time.
+
+[S08] A REAL ACCIDENT — WHAT THE INVESTIGATION FOUND
+On 27 May 2017, Goma Air flight 409, a Let L-410 aircraft, was operating a cargo charter from Kathmandu to Lukla. The Government of Nepal's Aircraft Accident Investigation Commission later published a detailed report.
+
+The report describes deteriorating weather around Lukla. During the approach, the aircraft deviated from its track and descended below the runway threshold height. The crew attempted to climb while the aircraft was still in a landing configuration.
+
+Investigators concluded that the probable cause was an aerodynamic stall associated with excessive drag and low speed during that attempted climb. The report listed critical terrain and rapidly deteriorating weather among the contributing factors, along with situational-awareness and procedure issues.
+
+This was a tragic accident. We do not need graphic imagery or invented cockpit dialogue to understand its lesson. The official report shows how weather, terrain, aircraft state and human decisions can combine in a demanding environment.
+
+[S09] WHY “JUST GO AROUND” IS NOT SIMPLE HERE
+At many airports, an unstable approach can be discontinued with a go-around. But the Lukla investigation describes a specific terrain limitation: once an aircraft has reached the committed part of the final approach, a standard go-around may not be possible.
+
+That makes the decisions made before the final approach especially important. Pilots need to assess the weather, route, aircraft performance and their own operating limits while there is still room to make a safe choice.
+
+The CAAN manual also describes the one-way runway pattern: land on Runway 06 and take off from Runway 24. These are formal local procedures, not a dramatic stunt.
+
+The safest flight is not the one that pushes through every challenge. It is the one that operates within the limits and waits when conditions are unsuitable.
+
+[S10] NOT A DAREDEVIL'S PLAYGROUND
+It is easy to turn Lukla into a spectacle: a tiny runway, dramatic mountains and aircraft passing close to the valley walls. But that misses the people who depend on the airport.
+
+The Himalayan Trust describes how the airstrip helped bring supplies to schools and hospital projects. Today it remains a vital connection for the Khumbu region.
+
+The pilots, airport staff, local residents and operators are not performing for a camera. They are working within a specialised mountain-aviation environment where weather and terrain must be taken seriously.
+
+The airport's reputation comes from real operational constraints. Its importance comes from the communities it serves.
+
+[S11] SO, IS IT THE WORLD'S MOST DANGEROUS?
+There is no universally accepted official league table that establishes one airport as the world's most dangerous. The label is a shorthand — and it can be misleading if treated as a measured ranking.
+
+But the documented facts explain why Lukla has such a formidable reputation: a 527-metre runway, a steep uphill gradient, high elevation, a one-way operating pattern, surrounding high terrain, weather restrictions and a final approach where the official investigation says a standard go-around is not possible after commitment.
+
+These factors do not mean that every flight is unsafe. They mean operations require specialised aircraft, careful procedures, suitable conditions and disciplined decisions.
+
+Lukla is not just a runway on a mountain. It is a lifeline built in a place where geography makes every connection harder.
+
+[S12] ENDING — THE GATEWAY THAT CONNECTS A REGION
+The next time you see an aircraft approaching Lukla, remember what lies behind that short strip of pavement: decades of community connection, careful mountain operations and a landscape that demands respect.
+
+The real story is not that pilots are fearless. It is that safe aviation depends on preparation, procedures and knowing when not to fly.
+
+This is Himalaya Unfolded — where we explore the stories behind Nepal's mountains, people and history.
+
+In our next documentary, we turn from the mountains to the making of a nation: how Prithvi Narayan Shah unified Nepal.
+
+[END]
+
+SOURCES
+[1] Government of Nepal, Aircraft Accident Investigation Commission, Final Report of 9N-AKY LET 410 Aircraft Accident at Tenzing-Hillary Airport, Lukla, 27 May 2017. Airport dimensions, slope, runway direction, terrain/go-around limitation, accident sequence, probable cause and contributing factors.
+https://www.tourism.gov.np/files/publication_files/Investigation%20Final%20Report%20GOMA%20Air%209N-AKY%20Lukla_1523462197.PDF
+
+[2] Civil Aviation Authority of Nepal, AFIS Operations Manual, Tenzing Hillary Airport, July 2017. Local runway designation and operating procedures; land Runway 06, take off Runway 24; weather and closure procedures.
+https://caanepal.gov.np/storage/app/media/LK-AFISOM-MERGED-2017.pdf
+
+[3] Himalayan Trust, “The Tenzing Hillary Airport (Lukla) project.” Airstrip built in 1964 to help transport supplies for schools and hospital projects; renamed in 2008.
+https://himalayantrust.org.np/completed_project/tenzing-hillary-airportlukla/
+
+[4] Federal Aviation Administration, Pilot’s Handbook of Aeronautical Knowledge, FAA-H-8083-25B. Density altitude and effects of reduced air density on power, thrust, lift and aircraft performance.
+https://www.faa.gov/sites/faa.gov/files/pilot_handbook_1.pdf
+
+[5] Civil Aviation Authority of Nepal, Aeronautical Information Publication (AIP) Nepal, Tenzing-Hillary Airport entry, Amendment 03/2024, 30 April 2024. Elevation 2,846 m; runway 06/24; 527 × 20 m; 11.7% upslope; land RWY 06 and take-off RWY 24. Confirm the latest live AIP/NOTAM before publication.
+https://e-aip.caanepal.gov.np/welcome/listall/489
