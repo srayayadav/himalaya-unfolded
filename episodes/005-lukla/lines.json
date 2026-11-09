@@ -1,0 +1,935 @@
+{
+ "lines": [
+  "Imagine flying toward a mountain airport where the runway is only 527 metres long.",
+  "The valley is narrow.",
+  "The terrain rises sharply around the approach.",
+  "Clouds can hide the ridgelines, and the runway itself climbs uphill.",
+  "This is Tenzing-Hillary Airport at Lukla, in Nepal's Khumbu region \u2014 the gateway used by many people travelling toward Mount Everest.",
+  "It is often called the world's most dangerous airport.",
+  "But that phrase needs context: there is no single universally accepted official ranking that proves Lukla is number one.",
+  "What is documented is unusual enough.",
+  "Its short, sloping runway, one-way operating pattern, high elevation, surrounding terrain and fast-changing mountain weather combine to make operations demanding.",
+  "So what makes this small airport so challenging \u2014 and why does it remain essential to life in the Himalayas?",
+  "Lukla sits in Solukhumbu District, in eastern Nepal, within the Khumbu region.",
+  "On a map, it is a small settlement surrounded by steep valleys and high mountain ridges.",
+  "The airport is not a large international hub.",
+  "It is a compact mountain airfield serving a remote region.",
+  "For trekkers, Lukla is a familiar starting point for journeys toward Namche Bazaar and the Everest region.",
+  "For local communities, its role is much more practical: it connects people and supplies with places where road access is limited or absent.",
+  "The airport's importance is not measured only by tourism.",
+  "It is part of the transport network that supports local livelihoods, services and emergency access.",
+  "To understand its risks, we first need to understand why it was built.",
+  "The Himalayan Trust records that Lukla's airstrip was built in 1964 under Sir Edmund Hillary's initiative.",
+  "Its original purpose was to make it easier to transport supplies for the Trust's school and hospital projects in the Khumbu.",
+  "Before the airstrip, the Trust says supplies from Kathmandu could require more than three weeks of difficult trekking by porters.",
+  "An air connection changed that equation.",
+  "The airport was later renamed Tenzing-Hillary Airport in 2008, honouring Tenzing Norgay and Edmund Hillary.",
+  "Its story is therefore not simply one of daring landings.",
+  "It began as an effort to connect remote communities with essential supplies.",
+  "But the geography that made an airstrip so valuable also made the engineering difficult.",
+  "The Government of Nepal's investigation report describes Lukla as a short-takeoff-and-landing airfield with a bitumen runway measuring 527 metres long and 20 metres wide.",
+  "That is a remarkably compact strip for aircraft operations.",
+  "There is little spare pavement compared with the long runways found at major airports.",
+  "The same report describes the runway as sloping uphill from Runway zero-six, with a gradient of 11.75 percent.",
+  "The runway orientation is zero-six, two-four.",
+  "Those numbers are not just trivia.",
+  "They shape how aircraft use the airport.",
+  "According to the Civil Aviation Authority of Nepal's Lukla operations manual, aircraft land on Runway zero-six and take off from Runway two-four.",
+  "In other words, the normal pattern is directional: landing uphill, departure downhill.",
+  "The slope is part of the airport's operating design.",
+  "Think about the runway from the side.",
+  "It rises as an arriving aircraft moves along it.",
+  "That uphill gradient helps the aircraft decelerate during the landing roll.",
+  "For departure, the aircraft uses the opposite direction, moving downhill as it accelerates.",
+  "This is not a trick that removes risk.",
+  "It is a runway arrangement shaped by the terrain, and it requires pilots and operators to follow the published procedures.",
+  "At Lukla, the runway is also surrounded by steep terrain.",
+  "The official accident investigation report notes high ground beyond the Runway zero-six end and explains that a standard go-around is not possible once the final approach is committed.",
+  "That is a crucial distinction.",
+  "It does not mean every approach is automatically unsafe, or that pilots cannot make decisions earlier in the approach.",
+  "It means the final approach has a terrain constraint that makes planning, weather assessment and decision-making especially important.",
+  "The airport elevation is about 2,846 metres above mean sea level, according to Nepal's aeronautical information data.",
+  "At higher elevations, air density is lower.",
+  "The Federal Aviation Administration explains that less-dense air reduces engine power, propeller thrust and wing lift.",
+  "It can also increase the runway distance needed for takeoff and landing and reduce climb performance.",
+  "The exact effect depends on temperature, pressure, humidity, aircraft type, weight and other conditions.",
+  "Pilots use aircraft-specific performance data rather than relying on a simple rule of thumb.",
+  "At an airport with a short runway and rising terrain nearby, those performance calculations matter.",
+  "Aircraft must be suitable for the field, and their loading and operating conditions must stay within approved limits.",
+  "Weather in mountainous terrain is not simply a matter of looking up and deciding whether the sky appears blue.",
+  "Clouds can form around ridges and move through valleys.",
+  "Visibility can vary from one part of the approach to another.",
+  "The Civil Aviation Authority of Nepal's Lukla operations manual sets out local weather and traffic procedures.",
+  "It warns that fog or cloud in critical areas can lead to the airport being closed, and it instructs staff to pass deteriorating-weather information to arriving aircraft.",
+  "That is why delays and cancellations are part of mountain flying.",
+  "A flight that does not depart may disappoint passengers, but waiting for suitable conditions is a safety decision.",
+  "The airport's challenges are not just about the runway.",
+  "They are about the runway, terrain and weather interacting at the same time.",
+  "On 27 May 2017, Goma Air flight 409, a Let L four-ten aircraft, was operating a cargo charter from Kathmandu to Lukla.",
+  "The Government of Nepal's Aircraft Accident Investigation Commission later published a detailed report.",
+  "The report describes deteriorating weather around Lukla.",
+  "During the approach, the aircraft deviated from its track and descended below the runway threshold height.",
+  "The crew attempted to climb while the aircraft was still in a landing configuration.",
+  "Investigators concluded that the probable cause was an aerodynamic stall associated with excessive drag and low speed during that attempted climb.",
+  "The report listed critical terrain and rapidly deteriorating weather among the contributing factors, along with situational-awareness and procedure issues.",
+  "This was a tragic accident.",
+  "We do not need graphic imagery or invented cockpit dialogue to understand its lesson.",
+  "The official report shows how weather, terrain, aircraft state and human decisions can combine in a demanding environment.",
+  "At many airports, an unstable approach can be discontinued with a go-around.",
+  "But the Lukla investigation describes a specific terrain limitation: once an aircraft has reached the committed part of the final approach, a standard go-around may not be possible.",
+  "That makes the decisions made before the final approach especially important.",
+  "Pilots need to assess the weather, route, aircraft performance and their own operating limits while there is still room to make a safe choice.",
+  "The CAAN manual also describes the one-way runway pattern: land on Runway zero-six and take off from Runway two-four.",
+  "These are formal local procedures, not a dramatic stunt.",
+  "The safest flight is not the one that pushes through every challenge.",
+  "It is the one that operates within the limits and waits when conditions are unsuitable.",
+  "It is easy to turn Lukla into a spectacle: a tiny runway, dramatic mountains and aircraft passing close to the valley walls.",
+  "But that misses the people who depend on the airport.",
+  "The Himalayan Trust describes how the airstrip helped bring supplies to schools and hospital projects.",
+  "Today it remains a vital connection for the Khumbu region.",
+  "The pilots, airport staff, local residents and operators are not performing for a camera.",
+  "They are working within a specialised mountain-aviation environment where weather and terrain must be taken seriously.",
+  "The airport's reputation comes from real operational constraints.",
+  "Its importance comes from the communities it serves.",
+  "There is no universally accepted official league table that establishes one airport as the world's most dangerous.",
+  "The label is a shorthand \u2014 and it can be misleading if treated as a measured ranking.",
+  "But the documented facts explain why Lukla has such a formidable reputation: a 527-metre runway, a steep uphill gradient, high elevation, a one-way operating pattern, surrounding high terrain, weather restrictions and a final approach where the official investigation says a standard go-around is not possible after commitment.",
+  "These factors do not mean that every flight is unsafe.",
+  "They mean operations require specialised aircraft, careful procedures, suitable conditions and disciplined decisions.",
+  "Lukla is not just a runway on a mountain.",
+  "It is a lifeline built in a place where geography makes every connection harder.",
+  "The next time you see an aircraft approaching Lukla, remember what lies behind that short strip of pavement: decades of community connection, careful mountain operations and a landscape that demands respect.",
+  "The real story is not that pilots are fearless.",
+  "It is that safe aviation depends on preparation, procedures and knowing when not to fly.",
+  "This is Himalaya Unfolded \u2014 where we explore the stories behind Nepal's mountains, people and history.",
+  "In our next documentary, we turn from the mountains to the making of a nation: how Prithvi Narayan Shah unified Nepal."
+ ],
+ "idx": [
+  [
+   "S01",
+   0
+  ],
+  [
+   "S01",
+   1
+  ],
+  [
+   "S01",
+   2
+  ],
+  [
+   "S01",
+   3
+  ],
+  [
+   "S01",
+   4
+  ],
+  [
+   "S01",
+   5
+  ],
+  [
+   "S01",
+   6
+  ],
+  [
+   "S01",
+   7
+  ],
+  [
+   "S01",
+   8
+  ],
+  [
+   "S01",
+   9
+  ],
+  [
+   "S02",
+   0
+  ],
+  [
+   "S02",
+   1
+  ],
+  [
+   "S02",
+   2
+  ],
+  [
+   "S02",
+   3
+  ],
+  [
+   "S02",
+   4
+  ],
+  [
+   "S02",
+   5
+  ],
+  [
+   "S02",
+   6
+  ],
+  [
+   "S02",
+   7
+  ],
+  [
+   "S02",
+   8
+  ],
+  [
+   "S03",
+   0
+  ],
+  [
+   "S03",
+   1
+  ],
+  [
+   "S03",
+   2
+  ],
+  [
+   "S03",
+   3
+  ],
+  [
+   "S03",
+   4
+  ],
+  [
+   "S03",
+   5
+  ],
+  [
+   "S03",
+   6
+  ],
+  [
+   "S03",
+   7
+  ],
+  [
+   "S04",
+   0
+  ],
+  [
+   "S04",
+   1
+  ],
+  [
+   "S04",
+   2
+  ],
+  [
+   "S04",
+   3
+  ],
+  [
+   "S04",
+   4
+  ],
+  [
+   "S04",
+   5
+  ],
+  [
+   "S04",
+   6
+  ],
+  [
+   "S04",
+   7
+  ],
+  [
+   "S04",
+   8
+  ],
+  [
+   "S04",
+   9
+  ],
+  [
+   "S05",
+   0
+  ],
+  [
+   "S05",
+   1
+  ],
+  [
+   "S05",
+   2
+  ],
+  [
+   "S05",
+   3
+  ],
+  [
+   "S05",
+   4
+  ],
+  [
+   "S05",
+   5
+  ],
+  [
+   "S05",
+   6
+  ],
+  [
+   "S05",
+   7
+  ],
+  [
+   "S05",
+   8
+  ],
+  [
+   "S05",
+   9
+  ],
+  [
+   "S05",
+   10
+  ],
+  [
+   "S06",
+   0
+  ],
+  [
+   "S06",
+   1
+  ],
+  [
+   "S06",
+   2
+  ],
+  [
+   "S06",
+   3
+  ],
+  [
+   "S06",
+   4
+  ],
+  [
+   "S06",
+   5
+  ],
+  [
+   "S06",
+   6
+  ],
+  [
+   "S06",
+   7
+  ],
+  [
+   "S07",
+   0
+  ],
+  [
+   "S07",
+   1
+  ],
+  [
+   "S07",
+   2
+  ],
+  [
+   "S07",
+   3
+  ],
+  [
+   "S07",
+   4
+  ],
+  [
+   "S07",
+   5
+  ],
+  [
+   "S07",
+   6
+  ],
+  [
+   "S07",
+   7
+  ],
+  [
+   "S07",
+   8
+  ],
+  [
+   "S08",
+   0
+  ],
+  [
+   "S08",
+   1
+  ],
+  [
+   "S08",
+   2
+  ],
+  [
+   "S08",
+   3
+  ],
+  [
+   "S08",
+   4
+  ],
+  [
+   "S08",
+   5
+  ],
+  [
+   "S08",
+   6
+  ],
+  [
+   "S08",
+   7
+  ],
+  [
+   "S08",
+   8
+  ],
+  [
+   "S08",
+   9
+  ],
+  [
+   "S09",
+   0
+  ],
+  [
+   "S09",
+   1
+  ],
+  [
+   "S09",
+   2
+  ],
+  [
+   "S09",
+   3
+  ],
+  [
+   "S09",
+   4
+  ],
+  [
+   "S09",
+   5
+  ],
+  [
+   "S09",
+   6
+  ],
+  [
+   "S09",
+   7
+  ],
+  [
+   "S10",
+   0
+  ],
+  [
+   "S10",
+   1
+  ],
+  [
+   "S10",
+   2
+  ],
+  [
+   "S10",
+   3
+  ],
+  [
+   "S10",
+   4
+  ],
+  [
+   "S10",
+   5
+  ],
+  [
+   "S10",
+   6
+  ],
+  [
+   "S10",
+   7
+  ],
+  [
+   "S11",
+   0
+  ],
+  [
+   "S11",
+   1
+  ],
+  [
+   "S11",
+   2
+  ],
+  [
+   "S11",
+   3
+  ],
+  [
+   "S11",
+   4
+  ],
+  [
+   "S11",
+   5
+  ],
+  [
+   "S11",
+   6
+  ],
+  [
+   "S12",
+   0
+  ],
+  [
+   "S12",
+   1
+  ],
+  [
+   "S12",
+   2
+  ],
+  [
+   "S12",
+   3
+  ],
+  [
+   "S12",
+   4
+  ]
+ ],
+ "times": [
+  [
+   0.0,
+   7.06
+  ],
+  [
+   7.51,
+   8.98
+  ],
+  [
+   9.43,
+   12.29
+  ],
+  [
+   12.74,
+   17.33
+  ],
+  [
+   17.78,
+   27.08
+  ],
+  [
+   27.53,
+   30.9
+  ],
+  [
+   31.35,
+   39.69
+  ],
+  [
+   40.14,
+   42.96
+  ],
+  [
+   43.41,
+   55.25
+  ],
+  [
+   55.7,
+   62.61
+  ],
+  [
+   63.06,
+   68.82
+  ],
+  [
+   69.27,
+   75.22
+  ],
+  [
+   75.67,
+   79.06
+  ],
+  [
+   79.51,
+   83.52
+  ],
+  [
+   83.97,
+   91.01
+  ],
+  [
+   91.46,
+   101.41
+  ],
+  [
+   101.86,
+   106.14
+  ],
+  [
+   106.59,
+   113.48
+  ],
+  [
+   113.93,
+   118.52
+  ],
+  [
+   118.97,
+   127.76
+  ],
+  [
+   128.21,
+   136.55
+  ],
+  [
+   137.0,
+   145.22
+  ],
+  [
+   145.67,
+   148.16
+  ],
+  [
+   148.61,
+   156.38
+  ],
+  [
+   156.83,
+   160.5
+  ],
+  [
+   160.95,
+   165.87
+  ],
+  [
+   166.32,
+   172.19
+  ],
+  [
+   172.64,
+   186.42
+  ],
+  [
+   186.87,
+   190.69
+  ],
+  [
+   191.14,
+   196.45
+  ],
+  [
+   196.9,
+   206.14
+  ],
+  [
+   206.59,
+   209.79
+  ],
+  [
+   210.24,
+   212.65
+  ],
+  [
+   213.1,
+   215.62
+  ],
+  [
+   216.07,
+   227.1
+  ],
+  [
+   227.55,
+   233.26
+  ],
+  [
+   233.71,
+   237.04
+  ],
+  [
+   237.49,
+   239.67
+  ],
+  [
+   240.12,
+   243.45
+  ],
+  [
+   243.9,
+   248.63
+  ],
+  [
+   249.08,
+   255.61
+  ],
+  [
+   256.06,
+   258.56
+  ],
+  [
+   259.01,
+   267.28
+  ],
+  [
+   267.73,
+   271.68
+  ],
+  [
+   272.13,
+   284.8
+  ],
+  [
+   285.25,
+   287.13
+  ],
+  [
+   287.58,
+   295.88
+  ],
+  [
+   296.33,
+   305.25
+  ],
+  [
+   305.7,
+   315.74
+  ],
+  [
+   316.19,
+   319.42
+  ],
+  [
+   319.87,
+   328.19
+  ],
+  [
+   328.64,
+   335.48
+  ],
+  [
+   335.93,
+   343.06
+  ],
+  [
+   343.51,
+   349.8
+  ],
+  [
+   350.25,
+   357.1
+  ],
+  [
+   357.55,
+   364.85
+  ],
+  [
+   365.3,
+   372.51
+  ],
+  [
+   372.96,
+   376.58
+  ],
+  [
+   377.03,
+   380.83
+  ],
+  [
+   381.28,
+   389.45
+  ],
+  [
+   389.9,
+   402.17
+  ],
+  [
+   402.62,
+   407.16
+  ],
+  [
+   407.61,
+   415.46
+  ],
+  [
+   415.91,
+   419.56
+  ],
+  [
+   420.01,
+   424.79
+  ],
+  [
+   425.24,
+   437.02
+  ],
+  [
+   437.47,
+   444.65
+  ],
+  [
+   445.1,
+   448.75
+  ],
+  [
+   449.2,
+   456.01
+  ],
+  [
+   456.46,
+   462.18
+  ],
+  [
+   462.63,
+   473.68
+  ],
+  [
+   474.13,
+   484.96
+  ],
+  [
+   485.41,
+   487.33
+  ],
+  [
+   487.78,
+   494.14
+  ],
+  [
+   494.59,
+   503.0
+  ],
+  [
+   503.45,
+   508.89
+  ],
+  [
+   509.34,
+   521.28
+  ],
+  [
+   521.73,
+   526.45
+  ],
+  [
+   526.9,
+   535.84
+  ],
+  [
+   536.29,
+   545.31
+  ],
+  [
+   545.76,
+   549.92
+  ],
+  [
+   550.37,
+   554.59
+  ],
+  [
+   555.04,
+   560.61
+  ],
+  [
+   561.06,
+   570.13
+  ],
+  [
+   570.58,
+   573.54
+  ],
+  [
+   573.99,
+   580.56
+  ],
+  [
+   581.01,
+   584.81
+  ],
+  [
+   585.26,
+   591.51
+  ],
+  [
+   591.96,
+   599.28
+  ],
+  [
+   599.73,
+   604.32
+  ],
+  [
+   604.77,
+   607.67
+  ],
+  [
+   608.12,
+   615.84
+  ],
+  [
+   616.29,
+   621.88
+  ],
+  [
+   622.33,
+   646.65
+  ],
+  [
+   647.1,
+   650.6
+  ],
+  [
+   651.05,
+   659.37
+  ],
+  [
+   659.82,
+   662.78
+  ],
+  [
+   663.23,
+   668.42
+  ],
+  [
+   668.87,
+   683.01
+  ],
+  [
+   683.46,
+   686.73
+  ],
+  [
+   687.18,
+   693.47
+  ],
+  [
+   693.92,
+   700.87
+  ],
+  [
+   701.32,
+   709.64
+  ]
+ ]
+}
